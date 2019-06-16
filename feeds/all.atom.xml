@@ -17,6 +17,7 @@
 &lt;p&gt;&lt;img alt="test" src="images\panda.png"&gt;&lt;/p&gt;
 &lt;p&gt;The first thing we need to do is to import the Pandas library into our notebook to get started:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;IPython.display&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;HTML&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
