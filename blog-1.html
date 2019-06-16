@@ -32,7 +32,25 @@
 
 
 <p>Pandas is always loaded into the notebook as pd (don't ask why it just is!)</p>
-<p>*It is good practice to alway load whichever libraries you will be using in your work at the very beginning </p>
+<p><em>It is good practice to alway load whichever libraries you will be using in your work at the very beginning of your notebook</em></p>
+<p>The beauty of using Pandas is that it allows you to analyze and explore data in many different ways and many different sizes.</p>
+<p>You can load prebuilt datasets using:</p>
+<p>data_name = pd.read_csv('file_name.csv') </p>
+<p><em>(This function allows you to upload csv files which are excel based into your notebook. This is extremely helpful when you need to analyze large data sets which are already created using excel files)</em></p>
+<p>Or</p>
+<p>Lets say you want to analyze a small data sample. You can easily whip up your own data set using Pandas pd.DataFrame function. 
+Lets go ahead and give you an example:</p>
+<p><em>I am going to quickly whip up a dataframe of the Toronto Raptors 2019 championship roster and assign columns to hold information</em></p>
+<div class="highlight"><pre><span></span><span class="n">raptors</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">:[</span><span class="s1">&#39;Kawhi Leonard&#39;</span><span class="p">,</span><span class="s1">&#39;Kyle Lowry&#39;</span><span class="p">,</span> <span class="s1">&#39;Pascal Siakam&#39;</span><span class="p">,</span> <span class="s1">&#39;Danny Green&#39;</span><span class="p">,</span> <span class="s1">&#39;Marc Gasol&#39;</span><span class="p">,</span> <span class="s1">&#39;Fred VanVleet&#39;</span><span class="p">,</span> <span class="s1">&#39;Serge Ibaka&#39;</span><span class="p">,</span> <span class="s1">&#39;Norman Powell&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;Jeremy Lin&#39;</span><span class="p">,</span> <span class="s1">&#39;Patrick McCaw&#39;</span><span class="p">,</span> <span class="s1">&#39;Jodie Meeks&#39;</span><span class="p">,</span> <span class="s1">&#39;OG Anunoby&#39;</span><span class="p">,</span> <span class="s1">&#39;Chris Boucher&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;age&#39;</span><span class="p">:[</span><span class="mi">27</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">26</span><span class="p">],</span>
+    <span class="s1">&#39;nationality&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;Cameroon&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;Spain&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span><span class="s1">&#39;Spain&#39;</span><span class="p">,</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span><span class="s1">&#39;England&#39;</span><span class="p">,</span> <span class="s1">&#39;Saint Lucia&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;posion&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Forward&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Forward&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Centre&#39;</span><span class="p">,</span><span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Forward&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span><span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Forward&#39;</span><span class="p">,</span> <span class="s1">&#39;Forward&#39;</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">HTML</span><span class="p">(</span><span class="n">raptors</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="n">classes</span><span class="o">=</span><span class="s2">&quot;table table-stripped table-hover&quot;</span><span class="p">))</span>
+</pre></div>
  </div>
 </div>
  </div>
