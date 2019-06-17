@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>vishalsharma01</title><link href="https://vishalsharma01.github.io/Blog/" rel="alternate"></link><link href="https://vishalsharma01.github.io/Blog/feeds/all.atom.xml" rel="self"></link><id>https://vishalsharma01.github.io/Blog/</id><updated>2019-06-16T00:00:00-04:00</updated><entry><title>Pandas</title><link href="https://vishalsharma01.github.io/Blog/blog-1.html" rel="alternate"></link><published>2019-06-16T00:00:00-04:00</published><updated>2019-06-16T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-06-16:/Blog/blog-1.html</id><summary type="html">&lt;p&gt;&lt;img alt="test" src="images\pandaspy.png"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>vishalsharma01</title><link href="https://vishalsharma01.github.io/Blog/" rel="alternate"></link><link href="https://vishalsharma01.github.io/Blog/feeds/all.atom.xml" rel="self"></link><id>https://vishalsharma01.github.io/Blog/</id><updated>2019-06-16T00:00:00-04:00</updated><entry><title>Pandas - DataFrames</title><link href="https://vishalsharma01.github.io/Blog/blog-1.html" rel="alternate"></link><published>2019-06-16T00:00:00-04:00</published><updated>2019-06-16T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-06-16:/Blog/blog-1.html</id><summary type="html">&lt;p&gt;&lt;img alt="test" src="images\pandaspy.png"&gt;&lt;/p&gt;
 &lt;p&gt;Data Science.&lt;/p&gt;
 &lt;p&gt;Data.&lt;/p&gt;
 &lt;p&gt;It's right there in the name.&lt;/p&gt;
@@ -76,15 +76,25 @@ Lets go ahead and give you an example:&lt;/p&gt;
 &lt;p&gt;Now we are going to explore some functions that will help us view our data more closely and help us better understand it. 
 DataFrames are extremely powerful and useful objects: 'containers' that hold a lot of information. There are many functions built within Pandas that will allow us explore and manipulate this data to our liking but today we are going to just focus on just some of the basics.&lt;/p&gt;
 &lt;p&gt;We are going to be taking a look at:&lt;/p&gt;
-&lt;p&gt;.head()
-.dtypes
-.info()&lt;/p&gt;
+&lt;p&gt;.head()&lt;/p&gt;
+&lt;p&gt;.dtypes&lt;/p&gt;
+&lt;p&gt;.info()&lt;/p&gt;
 &lt;p&gt;Lets bring back our DataFrame and get started.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;raptors&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="test" src="images\raptors_table.png"&gt;&lt;/p&gt;</content><category term="python"></category></entry><entry><title>Second Blog Post!</title><link href="https://vishalsharma01.github.io/Blog/blog-2.html" rel="alternate"></link><published>2019-06-13T10:20:00-04:00</published><updated>2019-06-13T10:20:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-06-13:/Blog/blog-2.html</id><summary type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Cursus vitae congue mauris rhoncus. Pulvinar neque laoreet suspendisse interdum. Eu nisl nunc mi ipsum faucibus vitae. Sapien faucibus et molestie …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Cursus vitae congue mauris rhoncus. Pulvinar neque laoreet suspendisse interdum. Eu nisl nunc mi ipsum faucibus vitae. Sapien faucibus et molestie ac feugiat sed lectus vestibulum mattis. Nibh tortor id aliquet lectus proin nibh nisl. Sit amet venenatis urna cursus eget. Amet consectetur adipiscing elit duis. Quam pellentesque nec nam aliquam sem et tortor. Congue nisi vitae suscipit tellus.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="test" src="images\raptors_table.png"&gt;&lt;/p&gt;
+&lt;p&gt;Take a look at the above DataFrame. When we call the name 'raptors' it displays the entire thing. This is fine here because our dataset is not large by anymeans. But what if we had a file or DataFrame consisting of hundreds, thousands or even millions of rows? It would take awhile for our computers to be able to extract them all and display it back to us. This is where the .head() function comes in handy.&lt;/p&gt;
+&lt;p&gt;Using .head() on a dataframe automatically extracts the first 5 rows along with the column names to output back to us like so:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;raptors&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="test" src="images\raptors_head.png"&gt;&lt;/p&gt;
+&lt;p&gt;If we wanted more or less rows displayed back to us all we need to do is specify the number within the ()&lt;/p&gt;
+&lt;p&gt;&lt;img alt="test" src="images\raptors_head_less.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="test" src="images\raptors_head_more.png"&gt;&lt;/p&gt;</content><category term="python"></category></entry><entry><title>Second Blog Post!</title><link href="https://vishalsharma01.github.io/Blog/blog-2.html" rel="alternate"></link><published>2019-06-13T10:20:00-04:00</published><updated>2019-06-13T10:20:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-06-13:/Blog/blog-2.html</id><summary type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Cursus vitae congue mauris rhoncus. Pulvinar neque laoreet suspendisse interdum. Eu nisl nunc mi ipsum faucibus vitae. Sapien faucibus et molestie …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Cursus vitae congue mauris rhoncus. Pulvinar neque laoreet suspendisse interdum. Eu nisl nunc mi ipsum faucibus vitae. Sapien faucibus et molestie ac feugiat sed lectus vestibulum mattis. Nibh tortor id aliquet lectus proin nibh nisl. Sit amet venenatis urna cursus eget. Amet consectetur adipiscing elit duis. Quam pellentesque nec nam aliquam sem et tortor. Congue nisi vitae suscipit tellus.&lt;/p&gt;
 &lt;p&gt;'''
 import pandas as pd
 pd.DataFrame({'hi': [1,2,3], 'bye': [1,2,3]})

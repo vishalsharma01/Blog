@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <title>Pandas</title>
+ <title>Pandas - DataFrames</title>
  <!-- Latest compiled and minified CSS -->
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
  <div class="container">
@@ -12,7 +12,7 @@
  <div class="container">
 <div class="row">
  <div class="col-md-8">
-  <h3>Pandas</h3>
+  <h3>Pandas - DataFrames</h3>
   <label>2019-06-16</label>
   <p><img alt="test" src="images\pandaspy.png"></p>
 <p>Data Science.</p>
@@ -87,15 +87,25 @@ Lets go ahead and give you an example:</p>
 <p>Now we are going to explore some functions that will help us view our data more closely and help us better understand it. 
 DataFrames are extremely powerful and useful objects: 'containers' that hold a lot of information. There are many functions built within Pandas that will allow us explore and manipulate this data to our liking but today we are going to just focus on just some of the basics.</p>
 <p>We are going to be taking a look at:</p>
-<p>.head()
-.dtypes
-.info()</p>
+<p>.head()</p>
+<p>.dtypes</p>
+<p>.info()</p>
 <p>Lets bring back our DataFrame and get started.</p>
 <div class="highlight"><pre><span></span><span class="n">raptors</span>
 </pre></div>
 
 
 <p><img alt="test" src="images\raptors_table.png"></p>
+<p>Take a look at the above DataFrame. When we call the name 'raptors' it displays the entire thing. This is fine here because our dataset is not large by anymeans. But what if we had a file or DataFrame consisting of hundreds, thousands or even millions of rows? It would take awhile for our computers to be able to extract them all and display it back to us. This is where the .head() function comes in handy.</p>
+<p>Using .head() on a dataframe automatically extracts the first 5 rows along with the column names to output back to us like so:</p>
+<div class="highlight"><pre><span></span><span class="n">raptors</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+
+<p><img alt="test" src="images\raptors_head.png"></p>
+<p>If we wanted more or less rows displayed back to us all we need to do is specify the number within the ()</p>
+<p><img alt="test" src="images\raptors_head_less.png"></p>
+<p><img alt="test" src="images\raptors_head_more.png"></p>
  </div>
 </div>
  </div>
