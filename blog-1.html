@@ -23,7 +23,6 @@
 <p>1) Create DataFrames/Upload data</p>
 <p>2) Filter and extract data</p>
 <p>3) Exploring and Analyzing data</p>
-<p>4) Structuring desired data for plots</p>
 <p>If you're someone like me who needs to see things in action to get a better understanding of how they work then do not worry we are about to get started now!</p>
 <p><img alt="test" src="images\panda.png"></p>
 <p>The first thing we need to do is to import the Pandas library into our notebook to get started:</p>
@@ -35,7 +34,10 @@
 <p><em>It is good practice to alway load whichever libraries you will be using in your work at the very beginning of your notebook</em></p>
 <p>The beauty of using Pandas is that it allows you to analyze and explore data in many different ways and many different sizes.</p>
 <p>You can load prebuilt datasets using:</p>
-<p>data_name = pd.read_csv('file_name.csv') </p>
+<div class="highlight"><pre><span></span><span class="n">data_name</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;file_name.csv&#39;</span><span class="p">)</span> 
+</pre></div>
+
+
 <p><em>(This function allows you to upload csv files which are excel based into your notebook. This is extremely helpful when you need to analyze large data sets which are already created using excel files)</em></p>
 <p>Or</p>
 <p>Lets say you want to analyze a small data sample. You can easily whip up your own data set using Pandas pd.DataFrame function. 
@@ -46,7 +48,7 @@ Lets go ahead and give you an example:</p>
     <span class="s1">&#39;Jeremy Lin&#39;</span><span class="p">,</span> <span class="s1">&#39;Patrick McCaw&#39;</span><span class="p">,</span> <span class="s1">&#39;Jodie Meeks&#39;</span><span class="p">,</span> <span class="s1">&#39;OG Anunoby&#39;</span><span class="p">,</span> <span class="s1">&#39;Chris Boucher&#39;</span><span class="p">],</span>
     <span class="s1">&#39;age&#39;</span><span class="p">:[</span><span class="mi">27</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">26</span><span class="p">],</span>
     <span class="s1">&#39;nationality&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;Cameroon&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;Spain&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span><span class="s1">&#39;Spain&#39;</span><span class="p">,</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span><span class="s1">&#39;England&#39;</span><span class="p">,</span> <span class="s1">&#39;Saint Lucia&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;posion&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Forward&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Forward&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Centre&#39;</span><span class="p">,</span><span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Forward&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span><span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Forward&#39;</span><span class="p">,</span> <span class="s1">&#39;Forward&#39;</span><span class="p">]</span>
+    <span class="s1">&#39;position&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Forward&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Forward&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Centre&#39;</span><span class="p">,</span><span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Forward&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span><span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Forward&#39;</span><span class="p">,</span> <span class="s1">&#39;Forward&#39;</span><span class="p">]</span>
 <span class="p">})</span>
 
 <span class="n">raptors</span>
@@ -91,6 +93,9 @@ DataFrames are extremely powerful and useful objects: 'containers' that hold a l
 <p>Lets bring back our DataFrame and get started.</p>
 <div class="highlight"><pre><span></span><span class="n">raptors</span>
 </pre></div>
+
+
+<p><img alt="test" src="images\raptors_table.png"></p>
  </div>
 </div>
  </div>
