@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <title>Pandas - DataFrames</title>
+ <title>Pandas - Creating DataFrames</title>
  <!-- Latest compiled and minified CSS -->
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
  <div class="container">
@@ -12,7 +12,7 @@
  <div class="container">
 <div class="row">
  <div class="col-md-8">
-  <h3>Pandas - DataFrames</h3>
+  <h3>Pandas - Creating DataFrames</h3>
   <label>2019-06-16</label>
   <p><img alt="test" src="images\pandaspy.png"></p>
 <p>Data Science.</p>
@@ -23,6 +23,7 @@
 <p>1) Create DataFrames/Upload data</p>
 <p>2) Filter and extract data</p>
 <p>3) Exploring and Analyzing data</p>
+<p>In this blog we will focus on how to load datasets and creating our very own DataFrames and how to quickly view and understand the data within the DataFrames.</p>
 <p>If you're someone like me who needs to see things in action to get a better understanding of how they work then do not worry we are about to get started now!</p>
 <p><img alt="test" src="images\panda.png"></p>
 <p>The first thing we need to do is to import the Pandas library into our notebook to get started:</p>
@@ -105,15 +106,15 @@ DataFrames are extremely powerful and useful objects: 'containers' that hold a l
 <p><img alt="test" src="images\raptors_head.png"></p>
 <p>If we wanted more or less rows displayed back to us all we need to do is specify the number within the ()</p>
 <div class="highlight"><pre><span></span><span class="n">raptors</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="err">!</span><span class="p">[</span><span class="n">test</span><span class="p">](</span><span class="n">images</span>\<span class="n">raptors_head_less</span><span class="o">.</span><span class="n">png</span><span class="p">)</span>
 </pre></div>
 
 
+<p><img alt="test" src="images\raptors_head_less.png"></p>
 <div class="highlight"><pre><span></span><span class="n">raptors</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
-<span class="err">!</span><span class="p">[</span><span class="n">test</span><span class="p">](</span><span class="n">images</span>\<span class="n">raptors_head_more</span><span class="o">.</span><span class="n">png</span><span class="p">)</span>
 </pre></div>
 
 
+<p><img alt="test" src="images\raptors_head_more.png"></p>
 <p>Now that we have a good grasp on how the .head() function work lets move on.</p>
 <p><em>.info()</em></p>
 <p>This is one of Pandas most important functions and should always be used when working with new DataFrames. </p>
@@ -153,7 +154,10 @@ what changes need to be made and what needs to be cleaned up so that we have a p
 <p><img alt="test" src="images\raptors_describe.png"></p>
 <p>Because we only have one numerical column <em>(age)</em> .describe is only able to show information on this</p>
 <p>Here you can see the statistics of the age columns. </p>
-<p><img alt="test" src="images\confused.png"></p>
+<p>Well there you go! We just learned how to load data into our Python notebooks and how to create our very own DataFrames from scratch and how to quickly view the data within.</p>
+<p><img alt="test" src="images\success.png"></p>
+<p>Believe me I know that all of this can be very overwhelming when trying to learn a programming language for the first time but I hope I was able to keep things simple and easy and following along has not been difficult.</p>
+<p>Like I mentioned before there are many functions that can be used with Pandas to explore data but I believe that these 3 that I presented above are the most important ones to learn and understand first before you dive in deeper to more complex ones.</p>
  </div>
 </div>
  </div>
