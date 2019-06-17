@@ -142,9 +142,18 @@ DataFrames are extremely powerful and useful objects: 'containers' that hold a l
 
 <p><img alt="test" src="images\raptors_info.png"></p>
 <p>We now have all the info we need about our raptors DataFrame to continue working on our data.
-Because we created this DataFrame ourselves we know that their is no missing or corrupted data and that all columns contain the correct information so therefore we dont need to do and cleaning of the data. But in most cases when you run .info() on a DataFrame it is to see
+Because we created this DataFrame ourselves we know that their is no missing or corrupted data and that all columns contain the correct information so therefore we dont need to do any dat cleaning. But in most cases when you run .info() on a DataFrame it is to see
 what changes need to be made and what needs to be cleaned up so that we have a proper DataFrame to use to do our analyzing.</p>
-<p>Another good</p>
+<p>Another good function to use on our data will be <em>.describe</em></p>
+<p>This function describes the info in the DataFrame as statistics</p>
+<div class="highlight"><pre><span></span><span class="n">raptors</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+
+<p><img alt="test" src="images\raptors_describe.png"></p>
+<p>Because we only have one numerical column <em>(age)</em> .describe is only able to show information on this</p>
+<p>Here you can see the statistics of the age columns. </p>
+<p><img alt="test" src="images\confused.jpeg"></p>
  </div>
 </div>
  </div>
