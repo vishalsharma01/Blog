@@ -48,10 +48,49 @@ Lets go ahead and give you an example:</p>
     <span class="s1">&#39;nationality&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;Cameroon&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;Spain&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span><span class="s1">&#39;Spain&#39;</span><span class="p">,</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span><span class="s1">&#39;England&#39;</span><span class="p">,</span> <span class="s1">&#39;Saint Lucia&#39;</span><span class="p">],</span>
     <span class="s1">&#39;posion&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Forward&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Forward&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Centre&#39;</span><span class="p">,</span><span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Forward&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Guard&#39;</span><span class="p">,</span><span class="s1">&#39;Guard&#39;</span><span class="p">,</span> <span class="s1">&#39;Forward&#39;</span><span class="p">,</span> <span class="s1">&#39;Forward&#39;</span><span class="p">]</span>
 <span class="p">})</span>
+
+<span class="n">raptors</span>
 </pre></div>
 
 
 <p><img alt="test" src="images\raptors_table.png"></p>
+<p>Here I have created my very own DataFrame by inputting information into a dictionary and using the pd.DataFrame function to return me an organized table using the columns that I specified to help me now better explore and analyze the data.</p>
+<p>From my own personal experience, I know that python code can be a little intimidating at first glance and can make things seems a little confusing so lets break down my process here step by step:</p>
+<ol>
+<li>
+<p>Call upon the pd.DataFrame() function to specify what the code will be doing
+<em>(we will be building our data within the ()</em>)</p>
+</li>
+<li>
+<p>Using {} specifies that we will be creating a dictionary</p>
+</li>
+</ol>
+<p>Now to populate the dictionary with the information:</p>
+<ol>
+<li>
+<p>'name', 'age', 'nationality', and 'position' are the names of the columns I want to created for my data
+<em>(if you look closely you wil notice that the column names are inside the {} but are on the outside of the [] )</em></p>
+</li>
+<li>
+<p>Now we will use [] to populate a list of information inside each column name we want created 
+<em>(eg. for the name column we will populate a list[] of Raptor player names, for the age column a list[] of ages, and so on...)</em></p>
+</li>
+<li>
+<p>Once we are finished populating the information we desire we simply wrap the code up and voila...</p>
+</li>
+</ol>
+<p>WE GOT OURSELVES A DATASET!</p>
+<p>The return output will be the information we inputted in the form of a table displayed above</p>
+<p>Since we have created this dataset exactly how we wanted we know that the information in here is legit. But, that is not always the case especially when you need to explore big datasets. Information can be corrupted, missing, all kinds of stuff and it is up to us to figure it out.</p>
+<p>Now we are going to explore some functions that will help us view our data more closely and help us better understand it. 
+DataFrames are extremely powerful and useful objects: 'containers' that hold a lot of information. There are many functions built within Pandas that will allow us explore and manipulate this data to our liking but today we are going to just focus on just some of the basics.</p>
+<p>We are going to be taking a look at:</p>
+<p>.head()
+.dtypes
+.info()</p>
+<p>Lets bring back our DataFrame and get started.</p>
+<div class="highlight"><pre><span></span><span class="n">raptors</span>
+</pre></div>
  </div>
 </div>
  </div>
