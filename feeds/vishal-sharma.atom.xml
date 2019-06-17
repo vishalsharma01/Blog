@@ -12,7 +12,7 @@
 &lt;p&gt;1) Create DataFrames/Upload data&lt;/p&gt;
 &lt;p&gt;2) Filter and extract data&lt;/p&gt;
 &lt;p&gt;3) Exploring and Analyzing data&lt;/p&gt;
-&lt;p&gt;In this blog we will focus on how to load datasets and creating our very own DataFrames and how to quickly view and understand the data within the DataFrames.&lt;/p&gt;
+&lt;p&gt;In this blog we will focus on how to load datasets and create our very own DataFrames and how to quickly view and understand the data within the DataFrames.&lt;/p&gt;
 &lt;p&gt;If you're someone like me who needs to see things in action to get a better understanding of how they work then do not worry we are about to get started now!&lt;/p&gt;
 &lt;p&gt;&lt;img alt="test" src="images\panda.png"&gt;&lt;/p&gt;
 &lt;p&gt;The first thing we need to do is to import the Pandas library into our notebook to get started:&lt;/p&gt;
@@ -146,8 +146,4 @@ what changes need to be made and what needs to be cleaned up so that we have a p
 &lt;p&gt;Well there you go! We just learned how to load data into our Python notebooks and how to create our very own DataFrames from scratch and how to quickly view the data within.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="test" src="images\success.png"&gt;&lt;/p&gt;
 &lt;p&gt;Believe me I know that all of this can be very overwhelming when trying to learn a programming language for the first time but I hope I was able to keep things simple and easy and following along has not been difficult.&lt;/p&gt;
-&lt;p&gt;Like I mentioned before there are many functions that can be used with Pandas to explore data but I believe that these 3 that I presented above are the most important ones to learn and understand first before you dive in deeper to more complex ones.&lt;/p&gt;</content><category term="python"></category></entry><entry><title>Second Blog Post!</title><link href="https://vishalsharma01.github.io/Blog/blog-2.html" rel="alternate"></link><published>2019-06-13T10:20:00-04:00</published><updated>2019-06-13T10:20:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-06-13:/Blog/blog-2.html</id><summary type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Cursus vitae congue mauris rhoncus. Pulvinar neque laoreet suspendisse interdum. Eu nisl nunc mi ipsum faucibus vitae. Sapien faucibus et molestie …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Cursus vitae congue mauris rhoncus. Pulvinar neque laoreet suspendisse interdum. Eu nisl nunc mi ipsum faucibus vitae. Sapien faucibus et molestie ac feugiat sed lectus vestibulum mattis. Nibh tortor id aliquet lectus proin nibh nisl. Sit amet venenatis urna cursus eget. Amet consectetur adipiscing elit duis. Quam pellentesque nec nam aliquam sem et tortor. Congue nisi vitae suscipit tellus.&lt;/p&gt;
-&lt;p&gt;'''
-import pandas as pd
-pd.DataFrame({'hi': [1,2,3], 'bye': [1,2,3]})
-'''&lt;/p&gt;</content><category term="python"></category></entry></feed>
+&lt;p&gt;Like I mentioned before there are many functions that can be used with Pandas to explore data but I believe that these 3 that I presented above are the most important ones to learn and understand first before you dive in deeper to more complex ones.&lt;/p&gt;</content><category term="python"></category></entry></feed>
