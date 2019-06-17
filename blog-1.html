@@ -88,8 +88,8 @@ Lets go ahead and give you an example:</p>
 DataFrames are extremely powerful and useful objects: 'containers' that hold a lot of information. There are many functions built within Pandas that will allow us explore and manipulate this data to our liking but today we are going to just focus on just some of the basics.</p>
 <p>We are going to be taking a look at:</p>
 <p>.head()</p>
-<p>.dtypes</p>
 <p>.info()</p>
+<p>.describe</p>
 <p>Lets bring back our DataFrame and get started.</p>
 <div class="highlight"><pre><span></span><span class="n">raptors</span>
 </pre></div>
@@ -104,8 +104,47 @@ DataFrames are extremely powerful and useful objects: 'containers' that hold a l
 
 <p><img alt="test" src="images\raptors_head.png"></p>
 <p>If we wanted more or less rows displayed back to us all we need to do is specify the number within the ()</p>
-<p><img alt="test" src="images\raptors_head_less.png"></p>
-<p><img alt="test" src="images\raptors_head_more.png"></p>
+<div class="highlight"><pre><span></span><span class="n">raptors</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="err">!</span><span class="p">[</span><span class="n">test</span><span class="p">](</span><span class="n">images</span>\<span class="n">raptors_head_less</span><span class="o">.</span><span class="n">png</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">raptors</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="err">!</span><span class="p">[</span><span class="n">test</span><span class="p">](</span><span class="n">images</span>\<span class="n">raptors_head_more</span><span class="o">.</span><span class="n">png</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Now that we have a good grasp on how the .head() function work lets move on.</p>
+<p><em>.info()</em></p>
+<p>This is one of Pandas most important functions and should always be used when working with new DataFrames. </p>
+<p>.info() displays a lot of information that tells us:</p>
+<ol>
+<li>
+<p>Name of columns</p>
+</li>
+<li>
+<p>Range Index (number of rows in the DataFrame)</p>
+</li>
+<li>
+<p>Count of non-null values <em>(null values are blank values or empty white spaces)</em></p>
+</li>
+<li>
+<p>The type of data contained in the columns <em>(string, object, integer or float)</em></p>
+</li>
+<li>
+<p>Count of the data types <em>(how many string columns, objects, etc.)</em></p>
+</li>
+</ol>
+<p>Now lets try on our raptors DataFrame:</p>
+<div class="highlight"><pre><span></span><span class="n">raptors</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+
+
+<p><img alt="test" src="images\raptors_info.png"></p>
+<p>We now have all the info we need about our raptors DataFrame to continue working on our data.
+Because we created this DataFrame ourselves we know that their is no missing or corrupted data and that all columns contain the correct information so therefore we dont need to do and cleaning of the data. But in most cases when you run .info() on a DataFrame it is to see
+what changes need to be made and what needs to be cleaned up so that we have a proper DataFrame to use to do our analyzing.</p>
+<p>Another good</p>
  </div>
 </div>
  </div>
