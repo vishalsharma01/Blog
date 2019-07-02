@@ -120,7 +120,7 @@
 &lt;p&gt;-Sex&lt;/p&gt;
 &lt;p&gt;-The sport they play&lt;/p&gt;
 &lt;p&gt;-Nationality&lt;/p&gt;
-&lt;p&gt;Now let's take a closer look at our columns. All of our columns here have been inputted with categorical values. If we wanted to analyze this data and compare the variables this wouldn't be possible because as mentioned already we need to have numerical values to be able to do that such as 1's and 0's.&lt;/p&gt;
+&lt;p&gt;Now let's take a closer look at the columns in the DataFrame. I have inputted all of the columns with categorical values. If we wanted to analyze this data and compare the variables this would be difficult because as mentioned already we need to have numerical values to be able to do that such as 1's and 0's.&lt;/p&gt;
 &lt;p&gt;Taking a closer look we can see that two of our columns ('sex' and 'won championship') are populated with just two variables each: &lt;/p&gt;
 &lt;p&gt;'sex' = male or female and 'won championship' = yes or no.&lt;/p&gt;
 &lt;p&gt;Looking at this we can right away see that these categorical values can be quickly converted into numerics to be better represented. Lets go ahead and do that&lt;/p&gt;
@@ -129,10 +129,6 @@
 
 
 &lt;p&gt;&lt;em&gt;(here we are using the .replace() function to replace the categorical values 'male' and 'female' into 1 and 0 respectively)&lt;/em&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;won_championship&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;won_championship&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;yes&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;no&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -228,7 +224,100 @@
 &lt;/table&gt;
 &lt;/div&gt;
 
-&lt;p&gt;In our new table you can now see that the 'sex' and 'won championship' columns have had their categorical values replaced with numerical values of 1 and 0.&lt;/p&gt;</content><category term="python"></category></entry><entry><title>Pandas - Creating DataFrames</title><link href="https://vishalsharma01.github.io/Blog/blog-1.html" rel="alternate"></link><published>2019-06-16T00:00:00-04:00</published><updated>2019-06-16T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-06-16:/Blog/blog-1.html</id><summary type="html">&lt;p&gt;&lt;img alt="test" src="images\pandaspy.png"&gt;&lt;/p&gt;
+&lt;p&gt;In our new table you can now see that the 'sex' and 'won championship' columns have had their categorical values replaced with numerical values of 1 and 0. This is easy to do when there are just two categorical values within a column. But, what are we suppose to do when there are multiple categorical values? This is when the get_dummies function can come in handy.&lt;/p&gt;
+&lt;p&gt;Let's take a look at the 'country' column. Looking at it quickly we can see that there are 4 different categorical values:&lt;/p&gt;
+&lt;p&gt;Usa, Argentina, Canada and India.&lt;/p&gt;
+&lt;p&gt;You might think that we could replace these categorical values the same way we did with the previous two columns that we converted ('sex and 'won championship') but then we would have to use a range of numerics from 1-4 to represent each category. This would not work as the algorithm would not be able to clearly understand what we are trying to convey and therefore the category would no longer be of any use to us for modelling purposes. &lt;/p&gt;
+&lt;p&gt;Instead of converting the categorical values from a range of 1-4 and keeping them in the same column we are going to use the pd.get_dummies function to break the column apart and convert the categories into 1's and 0's so that the algorithm can incorporate this piece of data.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_dummies&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;country&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border="1" class="dataframe"&gt;
+  &lt;thead&gt;
+    &lt;tr style="text-align: right;"&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Argentina&lt;/th&gt;
+      &lt;th&gt;Canda&lt;/th&gt;
+      &lt;th&gt;India&lt;/th&gt;
+      &lt;th&gt;USA&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;5&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;6&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Using the pd.get_dummies function has taken the 'country' column and broken it up into 4 seperate columns (in alphabetical order) for the 4 different countries that were represented in our DataFrame.&lt;/p&gt;
+&lt;p&gt;Let's take a minute to now understand these new columns.&lt;/p&gt;
+&lt;p&gt;If you scroll up and take a look at the original DataFrame you can see that the basketball player James Harden is represented at Index 0 (the very first row in our table)&lt;/p&gt;
+&lt;p&gt;Now taking a look at our new dummy columns for country you can see that under Argentina, Canada and India there is 0 value and a value of 1 under USA for Index 0.&lt;/p&gt;
+&lt;p&gt;This is because in our original DataFrame we indicated that James Harden was from the USA so now when we create these dummy columns using the get_dummies function our code understands that, to represent James Harden as an athlete from the USA it can only assign a numerican value under the new 'USA' column leaving every other column to represent 0 because he is not from any of those countries. And the same concept applies for every other athlete in the DataFrame. The number 1 represents that the player is from the country and a 0 specifies 'no, not from this country'&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry><entry><title>Pandas - Creating DataFrames</title><link href="https://vishalsharma01.github.io/Blog/blog-1.html" rel="alternate"></link><published>2019-06-16T00:00:00-04:00</published><updated>2019-06-16T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-06-16:/Blog/blog-1.html</id><summary type="html">&lt;p&gt;&lt;img alt="test" src="images\pandaspy.png"&gt;&lt;/p&gt;
 &lt;p&gt;Data Science.&lt;/p&gt;
 &lt;p&gt;Data.&lt;/p&gt;
 &lt;p&gt;It's right there in the name.&lt;/p&gt;

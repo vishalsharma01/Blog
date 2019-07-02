@@ -135,7 +135,7 @@
 <p>-Sex</p>
 <p>-The sport they play</p>
 <p>-Nationality</p>
-<p>Now let's take a closer look at our columns. All of our columns here have been inputted with categorical values. If we wanted to analyze this data and compare the variables this wouldn't be possible because as mentioned already we need to have numerical values to be able to do that such as 1's and 0's.</p>
+<p>Now let's take a closer look at the columns in the DataFrame. I have inputted all of the columns with categorical values. If we wanted to analyze this data and compare the variables this would be difficult because as mentioned already we need to have numerical values to be able to do that such as 1's and 0's.</p>
 <p>Taking a closer look we can see that two of our columns ('sex' and 'won championship') are populated with just two variables each: </p>
 <p>'sex' = male or female and 'won championship' = yes or no.</p>
 <p>Looking at this we can right away see that these categorical values can be quickly converted into numerics to be better represented. Lets go ahead and do that</p>
@@ -144,10 +144,6 @@
 
 
 <p><em>(here we are using the .replace() function to replace the categorical values 'male' and 'female' into 1 and 0 respectively)</em></p>
-<div class="highlight"><pre><span></span>
-</pre></div>
-
-
 <div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;won_championship&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;won_championship&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">([</span><span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 
@@ -243,7 +239,100 @@
 </table>
 </div>
 
-<p>In our new table you can now see that the 'sex' and 'won championship' columns have had their categorical values replaced with numerical values of 1 and 0.</p>
+<p>In our new table you can now see that the 'sex' and 'won championship' columns have had their categorical values replaced with numerical values of 1 and 0. This is easy to do when there are just two categorical values within a column. But, what are we suppose to do when there are multiple categorical values? This is when the get_dummies function can come in handy.</p>
+<p>Let's take a look at the 'country' column. Looking at it quickly we can see that there are 4 different categorical values:</p>
+<p>Usa, Argentina, Canada and India.</p>
+<p>You might think that we could replace these categorical values the same way we did with the previous two columns that we converted ('sex and 'won championship') but then we would have to use a range of numerics from 1-4 to represent each category. This would not work as the algorithm would not be able to clearly understand what we are trying to convey and therefore the category would no longer be of any use to us for modelling purposes. </p>
+<p>Instead of converting the categorical values from a range of 1-4 and keeping them in the same column we are going to use the pd.get_dummies function to break the column apart and convert the categories into 1's and 0's so that the algorithm can incorporate this piece of data.</p>
+<div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">])</span>
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Argentina</th>
+      <th>Canda</th>
+      <th>India</th>
+      <th>USA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Using the pd.get_dummies function has taken the 'country' column and broken it up into 4 seperate columns (in alphabetical order) for the 4 different countries that were represented in our DataFrame.</p>
+<p>Let's take a minute to now understand these new columns.</p>
+<p>If you scroll up and take a look at the original DataFrame you can see that the basketball player James Harden is represented at Index 0 (the very first row in our table)</p>
+<p>Now taking a look at our new dummy columns for country you can see that under Argentina, Canada and India there is 0 value and a value of 1 under USA for Index 0.</p>
+<p>This is because in our original DataFrame we indicated that James Harden was from the USA so now when we create these dummy columns using the get_dummies function our code understands that, to represent James Harden as an athlete from the USA it can only assign a numerican value under the new 'USA' column leaving every other column to represent 0 because he is not from any of those countries. And the same concept applies for every other athlete in the DataFrame. The number 1 represents that the player is from the country and a 0 specifies 'no, not from this country'</p>
+<div class="highlight"><pre><span></span>
+</pre></div>
  </div>
 </div>
  </div>
