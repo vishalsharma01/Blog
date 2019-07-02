@@ -19,7 +19,7 @@
     &lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;James Harden&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Serena Williams&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Lionel Messi&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Mike Trout&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Tom Brady&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Joe Thornton&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Sania Mirza&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
     &lt;span class="s1"&gt;&amp;#39;sex&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;male&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;female&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;male&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;male&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;male&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;male&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;female&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
     &lt;span class="s1"&gt;&amp;#39;sport&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;basketball&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;tennis&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;soccer&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;baseball&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;football&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;hockey&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;tennis&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s1"&gt;&amp;#39;nationality&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;usa&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;usa&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;argentina&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;usa&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;usa&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;canda&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;india&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;country&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;USA&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;USA&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Argentina&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;USA&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;USA&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Canda&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;India&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
     &lt;span class="s1"&gt;&amp;#39;won_championship&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;no&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;yes&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;yes&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;no&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;yes&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;no&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;yes&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -50,7 +50,7 @@
       &lt;th&gt;name&lt;/th&gt;
       &lt;th&gt;sex&lt;/th&gt;
       &lt;th&gt;sport&lt;/th&gt;
-      &lt;th&gt;nationality&lt;/th&gt;
+      &lt;th&gt;country&lt;/th&gt;
       &lt;th&gt;won_championship&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
@@ -60,7 +60,7 @@
       &lt;td&gt;James Harden&lt;/td&gt;
       &lt;td&gt;male&lt;/td&gt;
       &lt;td&gt;basketball&lt;/td&gt;
-      &lt;td&gt;usa&lt;/td&gt;
+      &lt;td&gt;USA&lt;/td&gt;
       &lt;td&gt;no&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -68,7 +68,7 @@
       &lt;td&gt;Serena Williams&lt;/td&gt;
       &lt;td&gt;female&lt;/td&gt;
       &lt;td&gt;tennis&lt;/td&gt;
-      &lt;td&gt;usa&lt;/td&gt;
+      &lt;td&gt;USA&lt;/td&gt;
       &lt;td&gt;yes&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -76,7 +76,7 @@
       &lt;td&gt;Lionel Messi&lt;/td&gt;
       &lt;td&gt;male&lt;/td&gt;
       &lt;td&gt;soccer&lt;/td&gt;
-      &lt;td&gt;argentina&lt;/td&gt;
+      &lt;td&gt;Argentina&lt;/td&gt;
       &lt;td&gt;yes&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -84,7 +84,7 @@
       &lt;td&gt;Mike Trout&lt;/td&gt;
       &lt;td&gt;male&lt;/td&gt;
       &lt;td&gt;baseball&lt;/td&gt;
-      &lt;td&gt;usa&lt;/td&gt;
+      &lt;td&gt;USA&lt;/td&gt;
       &lt;td&gt;no&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -92,7 +92,7 @@
       &lt;td&gt;Tom Brady&lt;/td&gt;
       &lt;td&gt;male&lt;/td&gt;
       &lt;td&gt;football&lt;/td&gt;
-      &lt;td&gt;usa&lt;/td&gt;
+      &lt;td&gt;USA&lt;/td&gt;
       &lt;td&gt;yes&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -100,7 +100,7 @@
       &lt;td&gt;Joe Thornton&lt;/td&gt;
       &lt;td&gt;male&lt;/td&gt;
       &lt;td&gt;hockey&lt;/td&gt;
-      &lt;td&gt;canda&lt;/td&gt;
+      &lt;td&gt;Canda&lt;/td&gt;
       &lt;td&gt;no&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -108,7 +108,7 @@
       &lt;td&gt;Sania Mirza&lt;/td&gt;
       &lt;td&gt;female&lt;/td&gt;
       &lt;td&gt;tennis&lt;/td&gt;
-      &lt;td&gt;india&lt;/td&gt;
+      &lt;td&gt;India&lt;/td&gt;
       &lt;td&gt;yes&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -129,10 +129,13 @@
 
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sex&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sex&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;male&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;female&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;#*(here we are using the .replace() function to replace the categorical values &amp;#39;male&amp;#39; and &amp;#39;female&amp;#39; into 1 and 0 respectively)*&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;won_championship&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;won_championship&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;yes&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;no&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="c1"&gt;#*(once again we are using .replace() to replace the &amp;#39;yes&amp;#39; and &amp;#39;no&amp;#39; in the &amp;#39;won championship&amp;#39; column into &amp;#39;1&amp;#39; and &amp;#39;0&amp;#39; as well)*&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -161,7 +164,7 @@
       &lt;th&gt;name&lt;/th&gt;
       &lt;th&gt;sex&lt;/th&gt;
       &lt;th&gt;sport&lt;/th&gt;
-      &lt;th&gt;nationality&lt;/th&gt;
+      &lt;th&gt;country&lt;/th&gt;
       &lt;th&gt;won_championship&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
@@ -171,7 +174,7 @@
       &lt;td&gt;James Harden&lt;/td&gt;
       &lt;td&gt;1&lt;/td&gt;
       &lt;td&gt;basketball&lt;/td&gt;
-      &lt;td&gt;usa&lt;/td&gt;
+      &lt;td&gt;USA&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -179,7 +182,7 @@
       &lt;td&gt;Serena Williams&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
       &lt;td&gt;tennis&lt;/td&gt;
-      &lt;td&gt;usa&lt;/td&gt;
+      &lt;td&gt;USA&lt;/td&gt;
       &lt;td&gt;1&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -187,7 +190,7 @@
       &lt;td&gt;Lionel Messi&lt;/td&gt;
       &lt;td&gt;1&lt;/td&gt;
       &lt;td&gt;soccer&lt;/td&gt;
-      &lt;td&gt;argentina&lt;/td&gt;
+      &lt;td&gt;Argentina&lt;/td&gt;
       &lt;td&gt;1&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -195,7 +198,7 @@
       &lt;td&gt;Mike Trout&lt;/td&gt;
       &lt;td&gt;1&lt;/td&gt;
       &lt;td&gt;baseball&lt;/td&gt;
-      &lt;td&gt;usa&lt;/td&gt;
+      &lt;td&gt;USA&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -203,7 +206,7 @@
       &lt;td&gt;Tom Brady&lt;/td&gt;
       &lt;td&gt;1&lt;/td&gt;
       &lt;td&gt;football&lt;/td&gt;
-      &lt;td&gt;usa&lt;/td&gt;
+      &lt;td&gt;USA&lt;/td&gt;
       &lt;td&gt;1&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -211,7 +214,7 @@
       &lt;td&gt;Joe Thornton&lt;/td&gt;
       &lt;td&gt;1&lt;/td&gt;
       &lt;td&gt;hockey&lt;/td&gt;
-      &lt;td&gt;canda&lt;/td&gt;
+      &lt;td&gt;Canda&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -219,15 +222,14 @@
       &lt;td&gt;Sania Mirza&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
       &lt;td&gt;tennis&lt;/td&gt;
-      &lt;td&gt;india&lt;/td&gt;
+      &lt;td&gt;India&lt;/td&gt;
       &lt;td&gt;1&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry><entry><title>Pandas - Creating DataFrames</title><link href="https://vishalsharma01.github.io/Blog/blog-1.html" rel="alternate"></link><published>2019-06-16T00:00:00-04:00</published><updated>2019-06-16T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-06-16:/Blog/blog-1.html</id><summary type="html">&lt;p&gt;&lt;img alt="test" src="images\pandaspy.png"&gt;&lt;/p&gt;
+&lt;p&gt;In our new table you can now see that the 'sex' and 'won championship' columns have had their categorical values replaced with numerical values of 1 and 0.&lt;/p&gt;</content><category term="python"></category></entry><entry><title>Pandas - Creating DataFrames</title><link href="https://vishalsharma01.github.io/Blog/blog-1.html" rel="alternate"></link><published>2019-06-16T00:00:00-04:00</published><updated>2019-06-16T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-06-16:/Blog/blog-1.html</id><summary type="html">&lt;p&gt;&lt;img alt="test" src="images\pandaspy.png"&gt;&lt;/p&gt;
 &lt;p&gt;Data Science.&lt;/p&gt;
 &lt;p&gt;Data.&lt;/p&gt;
 &lt;p&gt;It's right there in the name.&lt;/p&gt;
