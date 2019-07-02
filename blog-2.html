@@ -139,21 +139,20 @@
 <p>Taking a closer look we can see that two of our columns ('sex' and 'won championship') are populated with just two variables each: </p>
 <p>'sex' = male or female and 'won championship' = yes or no.</p>
 <p>Looking at this we can right away see that these categorical values can be quickly converted into numerics to be better represented. Lets go ahead and do that</p>
+<div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">([</span><span class="s1">&#39;male&#39;</span><span class="p">,</span> <span class="s1">&#39;female&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+
+<p><em>(here we are using the .replace() function to replace the categorical values 'male' and 'female' into 1 and 0 respectively)</em></p>
 <div class="highlight"><pre><span></span>
 </pre></div>
 
 
-<div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">([</span><span class="s1">&#39;male&#39;</span><span class="p">,</span> <span class="s1">&#39;female&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
-
-<span class="c1">#*(here we are using the .replace() function to replace the categorical values &#39;male&#39; and &#39;female&#39; into 1 and 0 respectively)*</span>
-</pre></div>
-
-
 <div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;won_championship&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;won_championship&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">([</span><span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
-<span class="c1">#*(once again we are using .replace() to replace the &#39;yes&#39; and &#39;no&#39; in the &#39;won championship&#39; column into &#39;1&#39; and &#39;0&#39; as well)*</span>
 </pre></div>
 
 
+<p><em>(once again we are using .replace() to replace the 'yes' and 'no' in the 'won championship' column into '1' and '0')</em></p>
 <div class="highlight"><pre><span></span><span class="n">data</span>
 </pre></div>
 
