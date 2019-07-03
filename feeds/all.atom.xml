@@ -226,7 +226,7 @@
 
 &lt;p&gt;In our new table you can now see that the 'sex' and 'won championship' columns have had their categorical values replaced with numerical values of 1 and 0. This is easy to do when there are just two categorical values within a column. But, what are we suppose to do when there are multiple categorical values? This is when the get_dummies function can come in handy.&lt;/p&gt;
 &lt;p&gt;Let's take a look at the 'country' column. Looking at it quickly we can see that there are 4 different categorical values:&lt;/p&gt;
-&lt;p&gt;Usa, Argentina, Canada and India.&lt;/p&gt;
+&lt;p&gt;### Usa, Argentina, Canada and India.&lt;/p&gt;
 &lt;p&gt;You might think that we could replace these categorical values the same way we did with the previous two columns that we converted ('sex and 'won championship') but then we would have to use a range of numerics from 1-4 to represent each category. This would not work as the algorithm would not be able to clearly understand what we are trying to convey and therefore the category would no longer be of any use to us for modelling purposes. &lt;/p&gt;
 &lt;p&gt;Instead of converting the categorical values from a range of 1-4 and keeping them in the same column we are going to use the pd.get_dummies function to break the column apart and convert the categories into 1's and 0's so that the algorithm can incorporate this piece of data.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_dummies&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;country&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
@@ -446,15 +446,7 @@
 &lt;/table&gt;
 &lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;Because we now have seperate columns representing where each athlete is from we no longer need the 'country' column so we can go ahead and drop that column from the DataFrame using the .drop() function&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;drop&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;country&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;data&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -574,6 +566,14 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;There you go! We have now converted majority of our columns into numerical values of 1's and 0's.&lt;/p&gt;
+&lt;p&gt;pd.get_dummies is a great function to use to achieve this with but now the real question is:&lt;/p&gt;
+&lt;h4&gt;Is this suitable for creating models and using the data that we have to make a prediction?&lt;/h4&gt;
+&lt;p&gt;Let's find out!&lt;/p&gt;
+&lt;p&gt;What we are now going to attempt is to build a model and predict based on all our data:&lt;/p&gt;
+&lt;h4&gt;what are the chances of an athlete to win a championship in his/her respective sport?&lt;/h4&gt;
+&lt;p&gt;to do this we will have to now train-test split our data and define our X and Y variables&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(X represents all the variables(columns) we will use to make a prediction and Y represents what we are predicting (in this scenario that will be the likelihood of winning a championship)&lt;/em&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry><entry><title>Pandas - Creating DataFrames</title><link href="https://vishalsharma01.github.io/Blog/blog-1.html" rel="alternate"></link><published>2019-06-16T00:00:00-04:00</published><updated>2019-06-16T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-06-16:/Blog/blog-1.html</id><summary type="html">&lt;p&gt;&lt;img alt="test" src="images\pandaspy.png"&gt;&lt;/p&gt;
 &lt;p&gt;Data Science.&lt;/p&gt;

@@ -241,7 +241,7 @@
 
 <p>In our new table you can now see that the 'sex' and 'won championship' columns have had their categorical values replaced with numerical values of 1 and 0. This is easy to do when there are just two categorical values within a column. But, what are we suppose to do when there are multiple categorical values? This is when the get_dummies function can come in handy.</p>
 <p>Let's take a look at the 'country' column. Looking at it quickly we can see that there are 4 different categorical values:</p>
-<p>Usa, Argentina, Canada and India.</p>
+<p>### Usa, Argentina, Canada and India.</p>
 <p>You might think that we could replace these categorical values the same way we did with the previous two columns that we converted ('sex and 'won championship') but then we would have to use a range of numerics from 1-4 to represent each category. This would not work as the algorithm would not be able to clearly understand what we are trying to convey and therefore the category would no longer be of any use to us for modelling purposes. </p>
 <p>Instead of converting the categorical values from a range of 1-4 and keeping them in the same column we are going to use the pd.get_dummies function to break the column apart and convert the categories into 1's and 0's so that the algorithm can incorporate this piece of data.</p>
 <div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">])</span>
@@ -461,15 +461,7 @@
 </table>
 </div>
 
-<div class="highlight"><pre><span></span>
-</pre></div>
-
-
 <p>Because we now have seperate columns representing where each athlete is from we no longer need the 'country' column so we can go ahead and drop that column from the DataFrame using the .drop() function</p>
-<div class="highlight"><pre><span></span>
-</pre></div>
-
-
 <div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;country&#39;</span><span class="p">)</span>
 <span class="n">data</span>
 </pre></div>
@@ -589,6 +581,14 @@
 </pre></div>
 
 
+<p>There you go! We have now converted majority of our columns into numerical values of 1's and 0's.</p>
+<p>pd.get_dummies is a great function to use to achieve this with but now the real question is:</p>
+<h4>Is this suitable for creating models and using the data that we have to make a prediction?</h4>
+<p>Let's find out!</p>
+<p>What we are now going to attempt is to build a model and predict based on all our data:</p>
+<h4>what are the chances of an athlete to win a championship in his/her respective sport?</h4>
+<p>to do this we will have to now train-test split our data and define our X and Y variables</p>
+<p><em>(X represents all the variables(columns) we will use to make a prediction and Y represents what we are predicting (in this scenario that will be the likelihood of winning a championship)</em></p>
 <div class="highlight"><pre><span></span>
 </pre></div>
  </div>
