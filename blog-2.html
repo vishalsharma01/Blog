@@ -720,8 +720,8 @@
 
 <p>If you take a look at the columns that we assigned to our X variable you will notice that we still have one column ('sport') that is still housing categorical values. To be able to go ahead and begin modelling our data we will need to create dummy variables for that column using the pd.get_dummies function.</p>
 <p>We will go ahead and create dummy variables now for our X_train and X_test variables:</p>
-<div class="highlight"><pre><span></span><span class="n">X_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sport&#39;</span><span class="p">])</span>
-<span class="n">X_train</span>
+<div class="highlight"><pre><span></span><span class="n">X_train1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sport&#39;</span><span class="p">])</span>
+<span class="n">X_train1</span>
 </pre></div>
 
 
@@ -825,8 +825,8 @@
 </table>
 </div>
 
-<div class="highlight"><pre><span></span><span class="n">X_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sport&#39;</span><span class="p">])</span>
-<span class="n">X_test</span>
+<div class="highlight"><pre><span></span><span class="n">X_test1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sport&#39;</span><span class="p">])</span>
+<span class="n">X_test1</span>
 </pre></div>
 
 
@@ -889,8 +889,8 @@
 
 <span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
 
-<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train1</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test1</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
 </pre></div>
 
 
@@ -903,10 +903,10 @@
 
 <span class="ne">ValueError</span>                                <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
 
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">19</span><span class="o">-</span><span class="n">e26f743230e2</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">17</span><span class="o">-</span><span class="n">f729cc9cba07</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
       <span class="mi">4</span> 
-      <span class="mi">5</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="o">----&gt;</span> <span class="mi">6</span> <span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+      <span class="mi">5</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train1</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="o">----&gt;</span> <span class="mi">6</span> <span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test1</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
 
 
 <span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Continuum</span>\<span class="n">anaconda3</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">sklearn</span>\<span class="n">base</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="n">score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sample_weight</span><span class="p">)</span>
@@ -941,7 +941,7 @@
 <p>we got ourselves an error...</p>
 <p><img alt="confused_smiley.png" src="images/confused_smiley.png"></p>
 <p>Something went wrong when we tried to model out data. Lets take a look and see if we can figure out what has happened:</p>
-<h3>ValueError: X has 7 features per sample; expecting 1.0</h3>
+<h3>ValueError: X has 7 features per sample; expecting 10</h3>
 <p>This is the error that has been returned to us when we tried to return a score for our model. The reason for this is that when we created new dummy variables for our X_train and X_test for the 'sport' column, our algorithm was not able to pick up the new peices and merge it correctly to what we already had. That is why were getting an error telling us that:</p>
 <p>We were given 7 features but actually we were suppose to receive 10. This is where get_dummies is no longer helpful. </p>
 <p>We could of switched all our columns into dummy variables prior to doing train-test split but that defeats the purpose of training our data set to pick up new information. Model's need to be able to predict...that's the whole purpose of them. Doing to much cleaning or data altering prior to train-test split takes away it's learning ability and renders it useless.</p>
@@ -953,6 +953,419 @@
 <p><a href="https://giphy.com/gifs/christmas-swing-the42-FP56vNcwOVyvu">via GIPHY</a></p>
 
 <h2>LabelBinarizer()</h2>
+<p>As i already mentioned, the LabelBinarizer function is basically pd.get_dummies on steroids.</p>
+<p>By this I mean it has the same capabilities but it will actually do what we need it to do so that we can model our data and return a score for our prediction. Something that get_dummies wasn't able to do for us because the alogrithm is not able to add in new peices.</p>
+<p>Let's now try and create our model using LabelBinarizer.</p>
+<p><em>(we already imported the function at the beginning of the notebook)</em></p>
+<p>First we will need to once again assign the correct variables to our X and y (X = features, y = what we are predicting)</p>
+<div class="highlight"><pre><span></span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;won_championship&#39;</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;won_championship&#39;</span><span class="p">]</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Now we bring in the LabelBinarizer function</p>
+<div class="highlight"><pre><span></span><span class="n">lb</span> <span class="o">=</span> <span class="n">LabelBinarizer</span><span class="p">()</span>
+
+<span class="n">lb</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">[</span><span class="s1">&#39;sport&#39;</span><span class="p">])</span>
+<span class="n">lb</span><span class="o">.</span><span class="n">classes_</span>
+<span class="n">lb</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">[</span><span class="s1">&#39;sport&#39;</span><span class="p">])</span>
+
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">lb</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">[</span><span class="s1">&#39;sport&#39;</span><span class="p">]),</span>
+                                   <span class="n">columns</span><span class="o">=</span><span class="n">lb</span><span class="o">.</span><span class="n">classes_</span><span class="p">,</span>
+                                   <span class="n">index</span><span class="o">=</span><span class="n">X_train</span><span class="o">.</span><span class="n">index</span><span class="p">))</span>
+
+<span class="n">X_train</span>
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sex</th>
+      <th>sport</th>
+      <th>Argentina</th>
+      <th>Canda</th>
+      <th>India</th>
+      <th>USA</th>
+      <th>baseball</th>
+      <th>football</th>
+      <th>hockey</th>
+      <th>soccer</th>
+      <th>tennis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>5</th>
+      <td>1</td>
+      <td>hockey</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>soccer</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>football</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>baseball</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0</td>
+      <td>tennis</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>So far, using the LabelBinarizer function we have gone ahead and recreated what pd.get_dummies did for us by taking the 'sport' column and breaking it up into new dummy columns representing each sport seperately.</p>
+<p>The big difference in the two functions is that LabelBinarizer will be able to retain this new information and continue using it for our modelling purposes.</p>
+<p>We now need to do this same step for our testing data (X_test)</p>
+<div class="highlight"><pre><span></span><span class="n">X_test</span> <span class="o">=</span> <span class="n">X_test</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">lb</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">[</span><span class="s1">&#39;sport&#39;</span><span class="p">]),</span>
+                                   <span class="n">columns</span><span class="o">=</span><span class="n">lb</span><span class="o">.</span><span class="n">classes_</span><span class="p">,</span>
+                                   <span class="n">index</span><span class="o">=</span><span class="n">X_test</span><span class="o">.</span><span class="n">index</span><span class="p">))</span>
+<span class="n">X_test</span>
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sex</th>
+      <th>sport</th>
+      <th>Argentina</th>
+      <th>Canda</th>
+      <th>India</th>
+      <th>USA</th>
+      <th>baseball</th>
+      <th>football</th>
+      <th>hockey</th>
+      <th>soccer</th>
+      <th>tennis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>basketball</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>tennis</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>We have now also broken up the 'sport' column for our test data and have created new individual columns for each sport represented by 0's and 1's.</p>
+<p>Now since we have blown up the original 'sport' column into individual columns we can go ahead and drop the sport column from our datasets.</p>
+<div class="highlight"><pre><span></span><span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;sport&#39;</span><span class="p">)</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">X_test</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;sport&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">X_train</span>
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sex</th>
+      <th>Argentina</th>
+      <th>Canda</th>
+      <th>India</th>
+      <th>USA</th>
+      <th>baseball</th>
+      <th>football</th>
+      <th>hockey</th>
+      <th>soccer</th>
+      <th>tennis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>5</th>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><span class="n">X_test</span>
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sex</th>
+      <th>Argentina</th>
+      <th>Canda</th>
+      <th>India</th>
+      <th>USA</th>
+      <th>baseball</th>
+      <th>football</th>
+      <th>hockey</th>
+      <th>soccer</th>
+      <th>tennis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Alright, now that we have transformed all our columns using LabelBinarizer lets now go ahead and see if we will be able to model a score for what we were trying to predict:</p>
+<h3>What are the chances of an athlete winning in his/her sport?</h3>
+<div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="k">C</span><span class="p">:</span><span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="n">v_sha</span><span class="err">\</span><span class="n">AppData</span><span class="err">\</span><span class="k">Local</span><span class="err">\</span><span class="n">Continuum</span><span class="err">\</span><span class="n">anaconda3</span><span class="err">\</span><span class="n">lib</span><span class="err">\</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="err">\</span><span class="n">sklearn</span><span class="err">\</span><span class="n">linear_model</span><span class="err">\</span><span class="n">logistic</span><span class="p">.</span><span class="n">py</span><span class="p">:</span><span class="mi">433</span><span class="p">:</span> <span class="n">FutureWarning</span><span class="p">:</span> <span class="k">Default</span> <span class="n">solver</span> <span class="n">will</span> <span class="n">be</span> <span class="n">changed</span> <span class="k">to</span> <span class="s1">&#39;lbfgs&#39;</span> <span class="k">in</span> <span class="mi">0</span><span class="p">.</span><span class="mi">22</span><span class="p">.</span> <span class="n">Specify</span> <span class="n">a</span> <span class="n">solver</span> <span class="k">to</span> <span class="n">silence</span> <span class="n">this</span> <span class="n">warning</span><span class="p">.</span>
+  <span class="n">FutureWarning</span><span class="p">)</span>
+
+
+
+
+
+<span class="mi">0</span><span class="p">.</span><span class="mi">5</span>
+</pre></div>
+
+
+<p><img alt="success.png" src="images/success.png"></p>
+<h2>IT WORKED!!!</h2>
+<h4>According to our model, a player in his/her sport has a 50% chance of winning a championship</h4>
+<p>*(this data was created to show you how get_dummies and LabelBinarizer work as functions and this by no means is an accurate prediction score of an athlete winning a championship in his/her respective sport)</p>
+<p>Well there you go...</p>
+<p>LabelBinarizer was able to accomplish what get_dummies could not do for us.</p>
+<h3>LabelBinarizer is the function to use when trying to alter categorical values into numerics for the purpose of modelling.</h3>
 <div class="highlight"><pre><span></span>
 </pre></div>
  </div>
