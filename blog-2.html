@@ -241,7 +241,7 @@
 
 <p>In our new table you can now see that the 'sex' and 'won championship' columns have had their categorical values replaced with numerical values of 1 and 0. This is easy to do when there are just two categorical values within a column. But, what are we suppose to do when there are multiple categorical values? This is when the get_dummies function can come in handy.</p>
 <p>Let's take a look at the 'country' column. Looking at it quickly we can see that there are 4 different categorical values:</p>
-<p>### Usa, Argentina, Canada and India.</p>
+<h3>Usa, Argentina, Canada and India.</h3>
 <p>You might think that we could replace these categorical values the same way we did with the previous two columns that we converted ('sex and 'won championship') but then we would have to use a range of numerics from 1-4 to represent each category. This would not work as the algorithm would not be able to clearly understand what we are trying to convey and therefore the category would no longer be of any use to us for modelling purposes. </p>
 <p>Instead of converting the categorical values from a range of 1-4 and keeping them in the same column we are going to use the pd.get_dummies function to break the column apart and convert the categories into 1's and 0's so that the algorithm can incorporate this piece of data.</p>
 <div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">])</span>
@@ -1366,8 +1366,6 @@
 <p>Well there you go...</p>
 <p>LabelBinarizer was able to accomplish what get_dummies could not do for us.</p>
 <h3>LabelBinarizer is the function to use when trying to alter categorical values into numerics for the purpose of modelling.</h3>
-<div class="highlight"><pre><span></span>
-</pre></div>
  </div>
 </div>
  </div>
