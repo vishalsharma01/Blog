@@ -589,6 +589,25 @@
 <h4>what are the chances of an athlete to win a championship in his/her respective sport?</h4>
 <p>to do this we will have to now train-test split our data and define our X and Y variables</p>
 <p><em>(X represents all the variables(columns) we will use to make a prediction and Y represents what we are predicting (in this scenario that will be the likelihood of winning a championship)</em></p>
+<p>The first step is to assign what peices of information we want for our X and y variables.</p>
+<p>Because we want to predict 'winning a championship' were going to drop that from our data DataFrame and assign that to X and assign the 'won_championship' column to our y (our prediction)</p>
+<p>Because all of our rows are identified by an Index number we can also go ahead and drop the 'name' column since each player has it's own unique id # based off the Index. This will be helpful for modelling.</p>
+<div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;won_championship&#39;</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;won_championship&#39;</span><span class="p">]</span>
+</pre></div>
+
+
+<p>Now we need to import 'train-test split' so we can begin to model our data</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>
+</pre></div>
+
+
 <div class="highlight"><pre><span></span>
 </pre></div>
  </div>
