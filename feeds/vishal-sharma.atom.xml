@@ -924,7 +924,7 @@
 
 &lt;h2&gt;Oops...&lt;/h2&gt;
 &lt;p&gt;we got ourselves an error...&lt;/p&gt;
-&lt;p&gt;&lt;img alt="images/confused_smiley.png" src="attachment:confused_smiley.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="confused_smiley.png" src="images/confused_smiley.png"&gt;&lt;/p&gt;
 &lt;p&gt;Something went wrong when we tried to model out data. Lets take a look and see if we can figure out what has happened:&lt;/p&gt;
 &lt;h3&gt;ValueError: X has 7 features per sample; expecting 1.0&lt;/h3&gt;
 &lt;p&gt;This is the error that has been returned to us when we tried to return a score for our model. The reason for this is that when we created new dummy variables for our X_train and X_test for the 'sport' column, our algorithm was not able to pick up the new peices and merge it correctly to what we already had. That is why were getting an error telling us that:&lt;/p&gt;
