@@ -939,7 +939,23 @@
 
 <h2>Oops...</h2>
 <p>we got ourselves an error...</p>
-<p><img alt="confused_smiley.png" src="images/confused_smiley.png"></p>
+<p><img alt="image/confused_smiley.png" src="attachment:confused_smiley.png"></p>
+<p>Something went wrong when we tried to model out data. Lets take a look and see if we can figure out what has happened:</p>
+<h3>ValueError: X has 7 features per sample; expecting 1.0</h3>
+<p>This is the error that has been returned to us when we tried to return a score for our model. The reason for this is that when we created new dummy variables for our X_train and X_test for the 'sport' column, our algorithm was not able to pick up the new peices and merge it correctly to what we already had. That is why were getting an error telling us that:</p>
+<p>We were given 7 features but actually we were suppose to receive 10. This is where get_dummies is no longer helpful. </p>
+<p>We could of switched all our columns into dummy variables prior to doing train-test split but that defeats the purpose of training our data set to pick up new information. Model's need to be able to predict...that's the whole purpose of them. Doing to much cleaning or data altering prior to train-test split takes away it's learning ability and renders it useless.</p>
+<p>This is as far as get_dummies can take us...</p>
+<p>But thanks to SciKit-Learn we have a function that is basically get_dummies on steroids.</p>
+<p>allow me to introduce you to:</p>
+<div class="highlight"><pre><span></span>
+</pre></div>
+
+
+<div style="width:100%;height:0;padding-bottom:77%;position:relative;"><iframe src="https://giphy.com/embed/FP56vNcwOVyvu" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+
+<p><a href="https://giphy.com/gifs/christmas-swing-the42-FP56vNcwOVyvu">via GIPHY</a></p>
+
 <div class="highlight"><pre><span></span>
 </pre></div>
  </div>
