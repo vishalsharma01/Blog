@@ -939,7 +939,7 @@
 
 <h2>Oops...</h2>
 <p>we got ourselves an error...</p>
-<p><img alt="image/confused_smiley.png" src="attachment:confused_smiley.png"></p>
+<p><img alt="images/confused_smiley.png" src="attachment:confused_smiley.png"></p>
 <p>Something went wrong when we tried to model out data. Lets take a look and see if we can figure out what has happened:</p>
 <h3>ValueError: X has 7 features per sample; expecting 1.0</h3>
 <p>This is the error that has been returned to us when we tried to return a score for our model. The reason for this is that when we created new dummy variables for our X_train and X_test for the 'sport' column, our algorithm was not able to pick up the new peices and merge it correctly to what we already had. That is why were getting an error telling us that:</p>
@@ -948,14 +948,11 @@
 <p>This is as far as get_dummies can take us...</p>
 <p>But thanks to SciKit-Learn we have a function that is basically get_dummies on steroids.</p>
 <p>allow me to introduce you to:</p>
-<div class="highlight"><pre><span></span>
-</pre></div>
-
-
-<div style="width:100%;height:0;padding-bottom:77%;position:relative;"><iframe src="https://giphy.com/embed/FP56vNcwOVyvu" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+<iframe src="https://giphy.com/embed/FP56vNcwOVyvu" width="480" height="371" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 <p><a href="https://giphy.com/gifs/christmas-swing-the42-FP56vNcwOVyvu">via GIPHY</a></p>
 
+<h2>LabelBinarizer()</h2>
 <div class="highlight"><pre><span></span>
 </pre></div>
  </div>
