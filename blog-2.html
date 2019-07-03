@@ -329,8 +329,266 @@
 <p>Using the pd.get_dummies function has taken the 'country' column and broken it up into 4 seperate columns (in alphabetical order) for the 4 different countries that were represented in our DataFrame.</p>
 <p>Let's take a minute to now understand these new columns.</p>
 <p>If you scroll up and take a look at the original DataFrame you can see that the basketball player James Harden is represented at Index 0 (the very first row in our table)</p>
-<p>Now taking a look at our new dummy columns for country you can see that under Argentina, Canada and India there is 0 value and a value of 1 under USA for Index 0.</p>
-<p>This is because in our original DataFrame we indicated that James Harden was from the USA so now when we create these dummy columns using the get_dummies function our code understands that, to represent James Harden as an athlete from the USA it can only assign a numerican value under the new 'USA' column leaving every other column to represent 0 because he is not from any of those countries. And the same concept applies for every other athlete in the DataFrame. The number 1 represents that the player is from the country and a 0 specifies 'no, not from this country'</p>
+<p>Now taking a look at our new dummy columns for 'country' you can see that under Argentina, Canada and India there is a 0 value and a value of 1 under USA for Index 0.</p>
+<p>This is because in our original DataFrame we indicated that James Harden was from the USA so now when we create these dummy columns using the get_dummies function our code understands that, to represent James Harden as an athlete from the USA it can only assign a numerical value of 1 under the new 'USA' column leaving every other column to represent 0 because he is not from any of those countries. And the same concept applies for every other athlete in the DataFrame. </p>
+<h3>To simplify:</h3>
+<p>the number 1 represents that the player is from that specific country and a 0 specifies 'not from this country'</p>
+<p>Now we can take the newly created dummy columns and merge them into our original DataFrame using the pd.concat function so that we can get a better picture.</p>
+<div class="highlight"><pre><span></span><span class="n">dummy</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">])</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">data</span><span class="p">,</span> <span class="n">dummy</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">data</span>
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>sex</th>
+      <th>sport</th>
+      <th>country</th>
+      <th>won_championship</th>
+      <th>Argentina</th>
+      <th>Canda</th>
+      <th>India</th>
+      <th>USA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>James Harden</td>
+      <td>1</td>
+      <td>basketball</td>
+      <td>USA</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Serena Williams</td>
+      <td>0</td>
+      <td>tennis</td>
+      <td>USA</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Lionel Messi</td>
+      <td>1</td>
+      <td>soccer</td>
+      <td>Argentina</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Mike Trout</td>
+      <td>1</td>
+      <td>baseball</td>
+      <td>USA</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Tom Brady</td>
+      <td>1</td>
+      <td>football</td>
+      <td>USA</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Joe Thornton</td>
+      <td>1</td>
+      <td>hockey</td>
+      <td>Canda</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Sania Mirza</td>
+      <td>0</td>
+      <td>tennis</td>
+      <td>India</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span>
+</pre></div>
+
+
+<p>Because we now have seperate columns representing where each athlete is from we no longer need the 'country' column so we can go ahead and drop that column from the DataFrame using the .drop() function</p>
+<div class="highlight"><pre><span></span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;country&#39;</span><span class="p">)</span>
+<span class="n">data</span>
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>sex</th>
+      <th>sport</th>
+      <th>won_championship</th>
+      <th>Argentina</th>
+      <th>Canda</th>
+      <th>India</th>
+      <th>USA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>James Harden</td>
+      <td>1</td>
+      <td>basketball</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Serena Williams</td>
+      <td>0</td>
+      <td>tennis</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Lionel Messi</td>
+      <td>1</td>
+      <td>soccer</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Mike Trout</td>
+      <td>1</td>
+      <td>baseball</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Tom Brady</td>
+      <td>1</td>
+      <td>football</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Joe Thornton</td>
+      <td>1</td>
+      <td>hockey</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Sania Mirza</td>
+      <td>0</td>
+      <td>tennis</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span>
+</pre></div>
+
+
 <div class="highlight"><pre><span></span>
 </pre></div>
  </div>
