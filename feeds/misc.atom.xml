@@ -1347,7 +1347,7 @@
 &lt;p&gt;&lt;img alt="success.png" src="images/success.png"&gt;&lt;/p&gt;
 &lt;h2&gt;IT WORKED!!!&lt;/h2&gt;
 &lt;h4&gt;According to our model, a player in his/her sport has a 50% chance of winning a championship&lt;/h4&gt;
-&lt;p&gt;*(this data was created to show you how get_dummies and LabelBinarizer work as functions and this by no means is an accurate prediction score of an athlete winning a championship in his/her respective sport)&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(this data was created to show you how get_dummies and LabelBinarizer work as functions and this by no means is an accurate prediction score of an athlete winning a championship in his/her respective sport)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Well there you go...&lt;/p&gt;
 &lt;p&gt;LabelBinarizer was able to accomplish what get_dummies could not do for us.&lt;/p&gt;
 &lt;h3&gt;LabelBinarizer is the function to use when trying to alter categorical values into numerics for the purpose of modelling.&lt;/h3&gt;</content><category term="python"></category></entry><entry><title>Pandas - Creating DataFrames</title><link href="https://vishalsharma01.github.io/Blog/blog-1.html" rel="alternate"></link><published>2019-06-16T00:00:00-04:00</published><updated>2019-06-16T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-06-16:/Blog/blog-1.html</id><summary type="html">&lt;p&gt;&lt;img alt="test" src="images\pandaspy.png"&gt;&lt;/p&gt;
