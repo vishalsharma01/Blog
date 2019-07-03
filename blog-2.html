@@ -597,6 +597,120 @@
 </pre></div>
 
 
+<p>This is how our X and y variables look after the variable assignment:</p>
+<div class="highlight"><pre><span></span><span class="n">X</span>
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sex</th>
+      <th>sport</th>
+      <th>Argentina</th>
+      <th>Canda</th>
+      <th>India</th>
+      <th>USA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>basketball</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>tennis</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>soccer</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>baseball</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>football</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1</td>
+      <td>hockey</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0</td>
+      <td>tennis</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><span class="n">y</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="mi">0</span>    <span class="mi">0</span>
+<span class="mi">1</span>    <span class="mi">1</span>
+<span class="mi">2</span>    <span class="mi">1</span>
+<span class="mi">3</span>    <span class="mi">0</span>
+<span class="mi">4</span>    <span class="mi">1</span>
+<span class="mi">5</span>    <span class="mi">0</span>
+<span class="mi">6</span>    <span class="mi">1</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">won_championship</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">int64</span>
+</pre></div>
+
+
 <p>Now we need to import 'train-test split' so we can begin to model our data</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 
@@ -604,12 +718,228 @@
 </pre></div>
 
 
-<div class="highlight"><pre><span></span>
+<p>If you take a look at the columns that we assigned to our X variable you will notice that we still have one column ('sport') that is still housing categorical values. To be able to go ahead and begin modelling our data we will need to create dummy variables for that column using the pd.get_dummies function.</p>
+<p>We will go ahead and create dummy variables now for our X_train and X_test variables:</p>
+<div class="highlight"><pre><span></span><span class="n">X_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sport&#39;</span><span class="p">])</span>
+<span class="n">X_train</span>
 </pre></div>
 
 
-<div class="highlight"><pre><span></span>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sex</th>
+      <th>Argentina</th>
+      <th>Canda</th>
+      <th>India</th>
+      <th>USA</th>
+      <th>sport_baseball</th>
+      <th>sport_football</th>
+      <th>sport_hockey</th>
+      <th>sport_soccer</th>
+      <th>sport_tennis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>5</th>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><span class="n">X_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sport&#39;</span><span class="p">])</span>
+<span class="n">X_test</span>
 </pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sex</th>
+      <th>Argentina</th>
+      <th>Canda</th>
+      <th>India</th>
+      <th>USA</th>
+      <th>sport_basketball</th>
+      <th>sport_tennis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2>And there we have it</h2>
+<p>our entire DataFrame now only consists of numerical values of 0's and 1's thanks to the get_dummies function</p>
+<p>Lets now go ahead and model our data and obtain a score.</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">v_sha</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Continuum</span>\<span class="n">anaconda3</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">sklearn</span>\<span class="n">linear_model</span>\<span class="n">logistic</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">433</span><span class="p">:</span> <span class="ne">FutureWarning</span><span class="p">:</span> <span class="n">Default</span> <span class="n">solver</span> <span class="n">will</span> <span class="n">be</span> <span class="n">changed</span> <span class="n">to</span> <span class="s1">&#39;lbfgs&#39;</span> <span class="ow">in</span> <span class="mf">0.22</span><span class="o">.</span> <span class="n">Specify</span> <span class="n">a</span> <span class="n">solver</span> <span class="n">to</span> <span class="n">silence</span> <span class="n">this</span> <span class="n">warning</span><span class="o">.</span>
+  <span class="ne">FutureWarning</span><span class="p">)</span>
+
+
+
+<span class="o">---------------------------------------------------------------------------</span>
+
+<span class="ne">ValueError</span>                                <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">19</span><span class="o">-</span><span class="n">e26f743230e2</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+      <span class="mi">4</span> 
+      <span class="mi">5</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="o">----&gt;</span> <span class="mi">6</span> <span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+
+
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Continuum</span>\<span class="n">anaconda3</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">sklearn</span>\<span class="n">base</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="n">score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sample_weight</span><span class="p">)</span>
+    <span class="mi">288</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    289         from .metrics import accuracy_score</span>
+<span class="s2">--&gt; 290         return accuracy_score(y, self.predict(X), sample_weight=sample_weight)</span>
+<span class="s2">    291 </span>
+<span class="s2">    292</span>
+
+
+<span class="s2">~\AppData\Local\Continuum</span><span class="se">\a</span><span class="s2">naconda3\lib\site-packages\sklearn\linear_model</span><span class="se">\b</span><span class="s2">ase.py in predict(self, X)</span>
+<span class="s2">    279             Predicted class label per sample.</span>
+<span class="s2">    280         &quot;&quot;&quot;</span>
+<span class="o">--&gt;</span> <span class="mi">281</span>         <span class="n">scores</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decision_function</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+    <span class="mi">282</span>         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">scores</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="mi">283</span>             <span class="n">indices</span> <span class="o">=</span> <span class="p">(</span><span class="n">scores</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+
+
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Continuum</span>\<span class="n">anaconda3</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">sklearn</span>\<span class="n">linear_model</span>\<span class="n">base</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="n">decision_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span>
+    <span class="mi">260</span>         <span class="k">if</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="n">n_features</span><span class="p">:</span>
+    <span class="mi">261</span>             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;X has </span><span class="si">%d</span><span class="s2"> features per sample; expecting </span><span class="si">%d</span><span class="s2">&quot;</span>
+<span class="o">--&gt;</span> <span class="mi">262</span>                              <span class="o">%</span> <span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">n_features</span><span class="p">))</span>
+    <span class="mi">263</span> 
+    <span class="mi">264</span>         <span class="n">scores</span> <span class="o">=</span> <span class="n">safe_sparse_dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">coef_</span><span class="o">.</span><span class="n">T</span><span class="p">,</span>
+
+
+<span class="ne">ValueError</span><span class="p">:</span> <span class="n">X</span> <span class="n">has</span> <span class="mi">7</span> <span class="n">features</span> <span class="n">per</span> <span class="n">sample</span><span class="p">;</span> <span class="n">expecting</span> <span class="mi">10</span>
+</pre></div>
+
+
+<h2>Oops...</h2>
+<p>we got ourselves an error...</p>
+<p><img alt="confused_smiley.png" src="attachment:confused_smiley.png"></p>
  </div>
 </div>
  </div>
