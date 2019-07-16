@@ -2,10 +2,6 @@
 <rss version="2.0"><channel><title>vishalsharma01 - Vishal Sharma</title><link>https://vishalsharma01.github.io/Blog/</link><description></description><lastBuildDate>Tue, 16 Jul 2019 00:00:00 -0400</lastBuildDate><item><title>jinja2</title><link>https://vishalsharma01.github.io/Blog/blog-3.html</link><description>&lt;p&gt;&lt;img alt="jinja.jpg" src="images/jinja.jpg"&gt;&lt;/p&gt;
 &lt;h2&gt;Welcome back folks!&lt;/h2&gt;
 &lt;p&gt;In today's blog we will be covering the topic of Jinja2&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;h3&gt;What is jinja2?&lt;/h3&gt;
 &lt;p&gt;jinja2 is a text-based templating langauge created for Python developers to generate a variety of different markup formats with one of the most popular one being HTML.&lt;/p&gt;
 &lt;p&gt;In this blog post we are …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vishal Sharma</dc:creator><pubDate>Tue, 16 Jul 2019 00:00:00 -0400</pubDate><guid isPermaLink="false">tag:vishalsharma01.github.io,2019-07-16:/Blog/blog-3.html</guid><category>python</category></item><item><title>LabelBinarizer vs get_dummies</title><link>https://vishalsharma01.github.io/Blog/blog-2.html</link><description>&lt;p&gt;LabelBinarizer and get_dummies are two features of Scikit-Learn/Pandas that are extremely crucial when it comes to transforming data for the purpose of train-test split (creating models and testing them). Like everything, they both come with their own set of pros and cons in terms of when it is appropriate …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vishal Sharma</dc:creator><pubDate>Mon, 01 Jul 2019 00:00:00 -0400</pubDate><guid isPermaLink="false">tag:vishalsharma01.github.io,2019-07-01:/Blog/blog-2.html</guid><category>python</category></item><item><title>Pandas - Creating DataFrames</title><link>https://vishalsharma01.github.io/Blog/blog-1.html</link><description>&lt;p&gt;&lt;img alt="test" src="images\pandaspy.png"&gt;&lt;/p&gt;
