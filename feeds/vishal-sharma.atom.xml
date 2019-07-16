@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>vishalsharma01 - Vishal Sharma</title><link href="https://vishalsharma01.github.io/Blog/" rel="alternate"></link><link href="https://vishalsharma01.github.io/Blog/feeds/vishal-sharma.atom.xml" rel="self"></link><id>https://vishalsharma01.github.io/Blog/</id><updated>2019-07-16T00:00:00-04:00</updated><entry><title>jinja2</title><link href="https://vishalsharma01.github.io/Blog/blog-3.html" rel="alternate"></link><published>2019-07-16T00:00:00-04:00</published><updated>2019-07-16T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-16:/Blog/blog-3.html</id><summary type="html">&lt;p&gt;&lt;img alt="jinja.jpg" src="attachment:jinja.jpg"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>vishalsharma01 - Vishal Sharma</title><link href="https://vishalsharma01.github.io/Blog/" rel="alternate"></link><link href="https://vishalsharma01.github.io/Blog/feeds/vishal-sharma.atom.xml" rel="self"></link><id>https://vishalsharma01.github.io/Blog/</id><updated>2019-07-16T00:00:00-04:00</updated><entry><title>jinja2</title><link href="https://vishalsharma01.github.io/Blog/blog-3.html" rel="alternate"></link><published>2019-07-16T00:00:00-04:00</published><updated>2019-07-16T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-16:/Blog/blog-3.html</id><summary type="html">&lt;p&gt;&lt;img alt="jinja.jpg" src="images/jinja.jpg"&gt;&lt;/p&gt;
 &lt;h2&gt;Welcome back folks!&lt;/h2&gt;
 &lt;p&gt;In today's blog we will be covering the topic of Jinja2&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
@@ -8,7 +8,7 @@
 
 &lt;p&gt;### What is jinja2?&lt;/p&gt;
 &lt;p&gt;jinja2 is a text-based templating langauge created for Python developers to generate a variety of different markup formats with one of the most popular one being HTML.&lt;/p&gt;
-&lt;p&gt;In this blog post we are …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="jinja.jpg" src="attachment:jinja.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;In this blog post we are …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="jinja.jpg" src="images/jinja.jpg"&gt;&lt;/p&gt;
 &lt;h2&gt;Welcome back folks!&lt;/h2&gt;
 &lt;p&gt;In today's blog we will be covering the topic of Jinja2&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
