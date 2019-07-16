@@ -6,7 +6,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;### What is jinja2?&lt;/p&gt;
+&lt;h3&gt;What is jinja2?&lt;/h3&gt;
 &lt;p&gt;jinja2 is a text-based templating langauge created for Python developers to generate a variety of different markup formats with one of the most popular one being HTML.&lt;/p&gt;
 &lt;p&gt;In this blog post we are …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="jinja.jpg" src="images/jinja.jpg"&gt;&lt;/p&gt;
 &lt;h2&gt;Welcome back folks!&lt;/h2&gt;
@@ -15,7 +15,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;### What is jinja2?&lt;/p&gt;
+&lt;h3&gt;What is jinja2?&lt;/h3&gt;
 &lt;p&gt;jinja2 is a text-based templating langauge created for Python developers to generate a variety of different markup formats with one of the most popular one being HTML.&lt;/p&gt;
 &lt;p&gt;In this blog post we are going to take a look at how to use jinja2 to generate templates for our code.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
