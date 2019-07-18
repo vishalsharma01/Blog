@@ -50,11 +50,88 @@
 
 
 <div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="s1">&#39;My name is {{name}} and I am a {{occupation}} at {{institute}} studying {{subject}}&#39;</span><span class="p">)</span>
-<span class="n">t</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Vishal&#39;</span><span class="p">,</span> <span class="n">occupation</span> <span class="o">=</span> <span class="s1">&#39;student&#39;</span><span class="p">,</span> <span class="n">institute</span> <span class="o">=</span> <span class="s1">&#39;General Assembly&#39;</span><span class="p">,</span> <span class="n">subject</span> <span class="o">=</span> <span class="s1">&#39;Data Science&#39;</span><span class="p">)</span>
+<span class="n">vishal</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Vishal&#39;</span><span class="p">,</span> <span class="n">occupation</span> <span class="o">=</span> <span class="s1">&#39;student&#39;</span><span class="p">,</span> <span class="n">institute</span> <span class="o">=</span> <span class="s1">&#39;General Assembly&#39;</span><span class="p">,</span> <span class="n">subject</span> <span class="o">=</span> <span class="s1">&#39;Data Science&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">vishal</span>
 </pre></div>
 
 
 <div class="highlight"><pre><span></span><span class="s1">&#39;My name is Vishal and I am a student at General Assembly studying Data Science&#39;</span>
+</pre></div>
+
+
+<p><em>(I am saving our input in a variable called 'vishal' to use later on in the blog)</em></p>
+<p>Using this information we can now create a quick HTML markdown:</p>
+<p>First we need to import the packages that will display the text in HTML for us and load in our template files</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">FileSystemLoader</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">file_loader</span> <span class="o">=</span> <span class="n">FileSystemLoader</span><span class="p">(</span><span class="s1">&#39;templates&#39;</span><span class="p">)</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="n">loader</span><span class="o">=</span><span class="n">file_loader</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>
+</pre></div>
+
+
+<p>We are first going to create a template in our folder. We are naming it test.html</p>
+<div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">writefile</span> <span class="n">templates</span><span class="o">/</span><span class="n">test</span><span class="o">.</span><span class="n">html</span>
+
+<span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="p">{{</span><span class="n">title</span><span class="p">}}</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">head</span>
+<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="p">{{</span><span class="n">header</span><span class="p">}}</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">{{</span><span class="n">body</span><span class="p">}}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">Overwriting</span> <span class="n">templates</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">html</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>
+</pre></div>
+
+
+<p>In this step we are populating our 'test.html' file with the information we returned back to us in the HTML form.</p>
+<p><em>(I am going to use the 'vishal' variable earlier and have this block of code output it back to me in html)</em></p>
+<div class="highlight"><pre><span></span><span class="n">test</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">get_template</span><span class="p">(</span><span class="s1">&#39;test.html&#39;</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">render</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> 
+    <span class="n">header</span><span class="o">=</span><span class="n">vishal</span><span class="p">,</span>
+    <span class="n">body</span><span class="o">=</span><span class="s1">&#39;What about you?&#39;</span><span class="p">)</span>
+
+<span class="n">HTML</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</pre></div>
+
+
+<p><html>
+<head>
+ <title>Hello</title>
+</head
+<body>
+ <h1>My name is Vishal and I am a student at General Assembly studying Data Science</h1>
+ <p>What about you?</p>
+</body>
+</html></p>
+<div class="highlight"><pre><span></span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>
 </pre></div>
 
 
