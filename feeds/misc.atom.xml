@@ -11,7 +11,7 @@
 &lt;p&gt;jinja2 is a text-based templating langauge created for Python developers to generate a variety of different markup formats with one of the most popular one being HTML.&lt;/p&gt;
 &lt;p&gt;In this blog post we are going to take a look at how to use jinja2 to generate templates for code which can be deployed online using Flask.&lt;/p&gt;
 &lt;p&gt;First off if you do not already have jinja2 installed you will need to go ahead and do that either in jupyter notebook or in your terminal:&lt;/p&gt;
-&lt;h3&gt;&lt;em&gt;! pip install jinja2&lt;/em&gt;&lt;/h3&gt;
+&lt;h4&gt;&lt;em&gt;! pip install jinja2&lt;/em&gt;&lt;/h4&gt;
 &lt;h4&gt;Let's start by becoming famillar with the syntax of jinja2 also know as 'Delimiters':&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Statements&lt;/strong&gt;: &lt;/li&gt;
@@ -33,7 +33,7 @@
 &lt;/ol&gt;
 &lt;p&gt;Line Statements are expressed as: &lt;strong&gt;# ... ##&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Line Statements are enabled by the application and are equivalent of using &lt;strong&gt;{% ... %}&lt;/strong&gt; for writing statements.&lt;/p&gt;
-&lt;p&gt;Now let's get familiar with some of the basics of jinja2:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Now let's get try out some of the basics of jinja2:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;jinja2&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Template&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -47,9 +47,9 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Here you can see we have &lt;em&gt;imported Template from jinja2&lt;/em&gt; and using this feature we have created a very basic peice of code.&lt;/p&gt;
-&lt;p&gt;First we stored the Template feature inside 't' and then we wrote out a sentence *'Welcome to {{something}}&lt;/p&gt;
-&lt;p&gt;Then using t.render we specified what the 'something' variable in our sentence will be. In this case we specified it to be 'jinja2' so we received the output of &lt;/p&gt;
+&lt;p&gt;Here you can see we have &lt;strong&gt;&lt;em&gt;imported Template from jinja2&lt;/em&gt;&lt;/strong&gt; and using this feature we have created a very basic peice of code.&lt;/p&gt;
+&lt;p&gt;First we stored the Template feature inside &lt;strong&gt;'t'&lt;/strong&gt; along with the string: *'Welcome to {{something}}&lt;/p&gt;
+&lt;p&gt;Then using t.render we specified what the 'something' variable (written inside an Expression) in our sentence will be. In this case we specified it to be 'jinja2' so we received the output of &lt;/p&gt;
 &lt;h4&gt;'Welcome to jinja2'.&lt;/h4&gt;
 &lt;p&gt;We can go ahead and add multiple variables within the sentence and define what they will output back to us.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Template&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;My name is {{name}} and I am a {{occupation}}&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
