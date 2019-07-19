@@ -82,16 +82,8 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;file_loader&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;FileSystemLoader&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;templates&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;env&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Environment&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;loader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;file_loader&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -111,10 +103,6 @@
 
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Overwriting&lt;/span&gt; &lt;span class="n"&gt;templates&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -138,17 +126,7 @@
  &lt;h1&gt;My name is Vishal and I am a student at General Assembly studying Data Science&lt;/h1&gt;
  &lt;p&gt;What about you?&lt;/p&gt;
 &lt;/body&gt;
-&lt;/html&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry><entry><title>LabelBinarizer vs get_dummies</title><link href="https://vishalsharma01.github.io/Blog/blog-2.html" rel="alternate"></link><published>2019-07-01T00:00:00-04:00</published><updated>2019-07-01T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-01:/Blog/blog-2.html</id><summary type="html">&lt;p&gt;LabelBinarizer and get_dummies are two features of Scikit-Learn/Pandas that are extremely crucial when it comes to transforming data for the purpose of train-test split (creating models and testing them). Like everything, they both come with their own set of pros and cons in terms of when it is appropriate …&lt;/p&gt;</summary><content type="html">&lt;p&gt;LabelBinarizer and get_dummies are two features of Scikit-Learn/Pandas that are extremely crucial when it comes to transforming data for the purpose of train-test split (creating models and testing them). Like everything, they both come with their own set of pros and cons in terms of when it is appropriate to use them or when potentially using them can limit what you can do in terms of effectively creating models and its efficiency.&lt;/p&gt;
+&lt;/html&gt;&lt;/p&gt;</content><category term="python"></category></entry><entry><title>LabelBinarizer vs get_dummies</title><link href="https://vishalsharma01.github.io/Blog/blog-2.html" rel="alternate"></link><published>2019-07-01T00:00:00-04:00</published><updated>2019-07-01T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-01:/Blog/blog-2.html</id><summary type="html">&lt;p&gt;LabelBinarizer and get_dummies are two features of Scikit-Learn/Pandas that are extremely crucial when it comes to transforming data for the purpose of train-test split (creating models and testing them). Like everything, they both come with their own set of pros and cons in terms of when it is appropriate …&lt;/p&gt;</summary><content type="html">&lt;p&gt;LabelBinarizer and get_dummies are two features of Scikit-Learn/Pandas that are extremely crucial when it comes to transforming data for the purpose of train-test split (creating models and testing them). Like everything, they both come with their own set of pros and cons in terms of when it is appropriate to use them or when potentially using them can limit what you can do in terms of effectively creating models and its efficiency.&lt;/p&gt;
 &lt;p&gt;In this post we are going to explore how both of them work with data and by the end we will be able to see if one of these features may be better for us to use based on it's capabitilies.&lt;/p&gt;
 &lt;p&gt;To get started we will need to import some Python libraries and then create a DataFrame to run these features on.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
