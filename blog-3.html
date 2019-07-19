@@ -22,11 +22,32 @@
 <p>In this blog post we are going to take a look at how to use jinja2 to generate templates for code which can be deployed online using Flask.</p>
 <p>First off if you do not already have jinja2 installed you will need to go ahead and do that either in jupyter notebook or in your terminal:</p>
 <h3><em>! pip install jinja2</em></h3>
+<h4>Let's start by becoming famillar with the syntax of jinja2 also know as 'Delimiters':</h4>
+<ol>
+<li><strong>Statements</strong>: </li>
+</ol>
+<p>Statements are expressed as: <strong>{% ... %}</strong></p>
+<p>This is used for writing out the structure(control flow) of the program. Statements can house conditionals such as '<strong>if</strong>, <strong>elif</strong>, and <strong>else</strong>' statements and <strong>for-loops</strong></p>
+<ol>
+<li><strong>Expressions</strong>:</li>
+</ol>
+<p>Expressions are expressed as: <strong>{{ ... }}</strong></p>
+<p>Statements are used for writing out objects such as <strong>strings</strong>, <strong>numbers</strong>, <strong>lists</strong>, <strong>tuples</strong> and <strong>dictionaries</strong>.</p>
+<ol>
+<li><strong>Comments</strong>:</li>
+</ol>
+<p>Comments are expressed as: <strong>{# ... #}</strong></p>
+<p>Comments are used to write in information outside of the actual code. For example, explaining the code to others or sharing other pieces of information.</p>
+<ol>
+<li><strong>Line Statements</strong>:</li>
+</ol>
+<p>Line Statements are expressed as: <strong># ... ##</strong></p>
+<p>Line Statements are enabled by the application and are equivalent of using <strong>{% ... %}</strong> for writing statements.</p>
+<p>Now let's get familiar with some of the basics of jinja2:</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Template</span>
 </pre></div>
 
 
-<p>Now let's get familiar with some of the basics of jinja2:</p>
 <div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="s1">&#39;Welcome to {{something}}&#39;</span><span class="p">)</span>
 <span class="n">t</span><span class="o">.</span><span class="n">render</span> <span class="p">(</span><span class="n">something</span> <span class="o">=</span> <span class="s1">&#39;jinja2&#39;</span><span class="p">)</span>
 </pre></div>
@@ -38,7 +59,8 @@
 
 <p>Here you can see we have <em>imported Template from jinja2</em> and using this feature we have created a very basic peice of code.</p>
 <p>First we stored the Template feature inside 't' and then we wrote out a sentence *'Welcome to {{something}}</p>
-<p>Then using t.render we specified what the 'something' variable in our sentence will be. In this case we specified it to be 'jinja2' so we received the output of 'Welcome to jinja2'.</p>
+<p>Then using t.render we specified what the 'something' variable in our sentence will be. In this case we specified it to be 'jinja2' so we received the output of </p>
+<h4>'Welcome to jinja2'.</h4>
 <p>We can go ahead and add multiple variables within the sentence and define what they will output back to us.</p>
 <div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="s1">&#39;My name is {{name}} and I am a {{occupation}}&#39;</span><span class="p">)</span>
 <span class="n">t</span><span class="o">.</span><span class="n">render</span> <span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Vishal&#39;</span><span class="p">,</span> <span class="n">occupation</span> <span class="o">=</span> <span class="s1">&#39;student&#39;</span><span class="p">)</span>
@@ -106,8 +128,8 @@
 </pre></div>
 
 
-<p>In this step we are populating our 'test.html' file with the information we returned back to us in the HTML form.</p>
-<p><em>(I am going to use the 'vishal' variable earlier and have this block of code output it back to me in html)</em></p>
+<p>In this step we are populating our 'test.html' file with the information we want returned back to us in HTML form.</p>
+<p><em>(I am going to use the 'vishal' variable I saved earlier and have this block of code output it back to me in html)</em></p>
 <div class="highlight"><pre><span></span><span class="n">test</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">get_template</span><span class="p">(</span><span class="s1">&#39;test.html&#39;</span><span class="p">)</span>
 <span class="n">output</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">render</span><span class="p">(</span>
     <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> 

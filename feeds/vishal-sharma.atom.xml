@@ -12,11 +12,32 @@
 &lt;p&gt;In this blog post we are going to take a look at how to use jinja2 to generate templates for code which can be deployed online using Flask.&lt;/p&gt;
 &lt;p&gt;First off if you do not already have jinja2 installed you will need to go ahead and do that either in jupyter notebook or in your terminal:&lt;/p&gt;
 &lt;h3&gt;&lt;em&gt;! pip install jinja2&lt;/em&gt;&lt;/h3&gt;
+&lt;h4&gt;Let's start by becoming famillar with the syntax of jinja2 also know as 'Delimiters':&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Statements&lt;/strong&gt;: &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Statements are expressed as: &lt;strong&gt;{% ... %}&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is used for writing out the structure(control flow) of the program. Statements can house conditionals such as '&lt;strong&gt;if&lt;/strong&gt;, &lt;strong&gt;elif&lt;/strong&gt;, and &lt;strong&gt;else&lt;/strong&gt;' statements and &lt;strong&gt;for-loops&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Expressions&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Expressions are expressed as: &lt;strong&gt;{{ ... }}&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Statements are used for writing out objects such as &lt;strong&gt;strings&lt;/strong&gt;, &lt;strong&gt;numbers&lt;/strong&gt;, &lt;strong&gt;lists&lt;/strong&gt;, &lt;strong&gt;tuples&lt;/strong&gt; and &lt;strong&gt;dictionaries&lt;/strong&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Comments&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Comments are expressed as: &lt;strong&gt;{# ... #}&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Comments are used to write in information outside of the actual code. For example, explaining the code to others or sharing other pieces of information.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Line Statements&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Line Statements are expressed as: &lt;strong&gt;# ... ##&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Line Statements are enabled by the application and are equivalent of using &lt;strong&gt;{% ... %}&lt;/strong&gt; for writing statements.&lt;/p&gt;
+&lt;p&gt;Now let's get familiar with some of the basics of jinja2:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;jinja2&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Template&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Now let's get familiar with some of the basics of jinja2:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Template&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Welcome to {{something}}&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;render&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;something&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;jinja2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -28,7 +49,8 @@
 
 &lt;p&gt;Here you can see we have &lt;em&gt;imported Template from jinja2&lt;/em&gt; and using this feature we have created a very basic peice of code.&lt;/p&gt;
 &lt;p&gt;First we stored the Template feature inside 't' and then we wrote out a sentence *'Welcome to {{something}}&lt;/p&gt;
-&lt;p&gt;Then using t.render we specified what the 'something' variable in our sentence will be. In this case we specified it to be 'jinja2' so we received the output of 'Welcome to jinja2'.&lt;/p&gt;
+&lt;p&gt;Then using t.render we specified what the 'something' variable in our sentence will be. In this case we specified it to be 'jinja2' so we received the output of &lt;/p&gt;
+&lt;h4&gt;'Welcome to jinja2'.&lt;/h4&gt;
 &lt;p&gt;We can go ahead and add multiple variables within the sentence and define what they will output back to us.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Template&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;My name is {{name}} and I am a {{occupation}}&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;render&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Vishal&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;occupation&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;student&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -96,8 +118,8 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;In this step we are populating our 'test.html' file with the information we returned back to us in the HTML form.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;(I am going to use the 'vishal' variable earlier and have this block of code output it back to me in html)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;In this step we are populating our 'test.html' file with the information we want returned back to us in HTML form.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(I am going to use the 'vishal' variable I saved earlier and have this block of code output it back to me in html)&lt;/em&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_template&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;test.html&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;render&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Hello&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
