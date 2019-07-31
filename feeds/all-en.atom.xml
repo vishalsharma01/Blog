@@ -12,10 +12,6 @@
 &lt;p&gt;Basically, frequentist statistics attempts to test whether an event will occur or not.&lt;/p&gt;
 &lt;p&gt;Let's take a look at a quick example:&lt;/p&gt;
 &lt;p&gt;I am going to use Pandas to spin up a table that will help us get a better understanding of this.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -99,15 +95,12 @@
 &lt;/table&gt;
 &lt;/div&gt;
 
+&lt;p&gt;Using this table we are trying to determine the fairness of a given coin. Because a coin flip can only have two possible outcomes (heads or tails) we can establish the fact that each has a probability of 0.5 (50%). &lt;/p&gt;
+&lt;p&gt;What the table is trying to depict is: the total # of coin tosses, how many heads we get and the difference.&lt;/p&gt;
+&lt;p&gt;In the first row we have 10 tosses of which we got 4 heads which means we have a difference of 1. What this means is that since we are using a "fair" coin where the probability of a head or tail is equally 50% we only managed to get 4 heads giving us an unequal difference of 1 againt the total number of tails we got which would be 6.&lt;/p&gt;
+&lt;h4&gt;Bayesians:&lt;/h4&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h4&gt;Bayesians:&lt;/h4&gt;</content><category term="python"></category></entry><entry><title>jinja2</title><link href="https://vishalsharma01.github.io/Blog/blog-3.html" rel="alternate"></link><published>2019-07-16T00:00:00-04:00</published><updated>2019-07-16T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-16:/Blog/blog-3.html</id><summary type="html">&lt;h2&gt;Welcome back folks!&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry><entry><title>jinja2</title><link href="https://vishalsharma01.github.io/Blog/blog-3.html" rel="alternate"></link><published>2019-07-16T00:00:00-04:00</published><updated>2019-07-16T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-16:/Blog/blog-3.html</id><summary type="html">&lt;h2&gt;Welcome back folks!&lt;/h2&gt;
 &lt;p&gt;In today's blog we will be covering the topic of jinja2!&lt;/p&gt;
 &lt;h3&gt;What is jinja2?&lt;/h3&gt;
 &lt;p&gt;jinja2 is a text-based templating langauge created for Python developers to generate a variety of different markup formats with one of the most popular one being HTML.&lt;/p&gt;
