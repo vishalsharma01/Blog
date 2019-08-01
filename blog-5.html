@@ -83,7 +83,7 @@
 
 
 <p><em>(once again, PIL has basically become Pillow and uses the same functions and commands to operate. This is why PIL is the name you use to import the library)</em></p>
-<p><strong>OPEN AN IMAGE</strong></p>
+<p><strong>.OPEN() and .SHOW() AN IMAGE</strong></p>
 <div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">v_sha</span><span class="se">\\</span><span class="s1">Documents</span><span class="se">\\</span><span class="s1">PIllowBlog</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -108,6 +108,20 @@
 
 
 <p>Using the <strong>.show()</strong> function on your stored image object will open up the image. If you go ahead and run this function you will notice that the image you chose to work with should open up to view.</p>
+<p><strong>Checking Image Data</strong></p>
+<p>Like everything, images also have stored data within them that can be helfpul to view when attempting to work with them.</p>
+<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">image1</span><span class="o">.</span><span class="n">format</span><span class="p">,</span> <span class="n">image1</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">image1</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">JPEG</span> <span class="p">(</span><span class="mi">259</span><span class="p">,</span> <span class="mi">194</span><span class="p">)</span> <span class="n">RGB</span>
+</pre></div>
+
+
+<p>Using these attributes we are able to see data for the image stored within the <strong>image1</strong> object <em>(lambo.jpg)</em></p>
+<p>.format = tells us the type of file the image is</p>
+<p>.size = tells us the dimensions of the image</p>
+<p>.mode = tells us that it is a colour image (RGB)</p>
 <div class="highlight"><pre><span></span>
 </pre></div>
                     </section>
