@@ -225,24 +225,24 @@
 </pre></div>
 
 
-<p><img alt="png" src="output_71_0.png"></p>
+<p><img alt="png" src="images/output_71_0.png"></p>
 <div class="highlight"><pre><span></span><span class="n">image1</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">180</span><span class="p">)</span>
 </pre></div>
 
 
-<p><img alt="png" src="output_72_0.png"></p>
+<p><img alt="png" src="images/output_72_0.png"></p>
 <p>Using the <strong>.rotate()</strong> attribute we have rotated our image object 180 degrees so that it is now upside down. If you wanted to save the image like this you can store it back into the original object <em>(image1)</em> or store it into a new object</p>
 <p>2) Change Image Colour</p>
 <div class="highlight"><pre><span></span><span class="n">image1</span>
 </pre></div>
 
 
-<p><img alt="png" src="output_76_0.png"></p>
+<p><img alt="png" src="images/output_76_0.png"></p>
 <div class="highlight"><pre><span></span><span class="n">image1</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;L&#39;</span><span class="p">)</span>
 </pre></div>
 
 
-<p><img alt="png" src="output_77_0.png"></p>
+<p><img alt="png" src="images/output_77_0.png"></p>
 <p>As you can see <strong>.convert(mode='L')</strong> is used to convert a coloured image into black and white.</p>
 <p>3) Blur an Image</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">ImageFilter</span>
@@ -253,12 +253,12 @@
 </pre></div>
 
 
-<p><img alt="png" src="output_82_0.png"></p>
+<p><img alt="png" src="images/output_82_0.png"></p>
 <div class="highlight"><pre><span></span><span class="n">image1</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ImageFilter</span><span class="o">.</span><span class="n">GaussianBlur</span><span class="p">())</span>
 </pre></div>
 
 
-<p><img alt="png" src="output_83_0.png"></p>
+<p><img alt="png" src="images/output_83_0.png"></p>
 <p>Here you can see that we have imported a <strong>Pillow</strong> package named <strong>ImageFilter</strong></p>
 <p>now using this package we have applied a <strong>GaussianBlur</strong> to our image using the default values and our image is now noticeably blurred.</p>
 <p>There are many things you can do using this library. </p>

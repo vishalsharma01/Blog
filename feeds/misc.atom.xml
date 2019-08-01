@@ -168,24 +168,24 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="png" src="output_71_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="png" src="images/output_71_0.png"&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;image1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rotate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;180&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="png" src="output_72_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="png" src="images/output_72_0.png"&gt;&lt;/p&gt;
 &lt;p&gt;Using the &lt;strong&gt;.rotate()&lt;/strong&gt; attribute we have rotated our image object 180 degrees so that it is now upside down. If you wanted to save the image like this you can store it back into the original object &lt;em&gt;(image1)&lt;/em&gt; or store it into a new object&lt;/p&gt;
 &lt;p&gt;2) Change Image Colour&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;image1&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="png" src="output_76_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="png" src="images/output_76_0.png"&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;image1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;convert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mode&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;L&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="png" src="output_77_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="png" src="images/output_77_0.png"&gt;&lt;/p&gt;
 &lt;p&gt;As you can see &lt;strong&gt;.convert(mode='L')&lt;/strong&gt; is used to convert a coloured image into black and white.&lt;/p&gt;
 &lt;p&gt;3) Blur an Image&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PIL&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;ImageFilter&lt;/span&gt;
@@ -196,12 +196,12 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="png" src="output_82_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="png" src="images/output_82_0.png"&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;image1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ImageFilter&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GaussianBlur&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="png" src="output_83_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="png" src="images/output_83_0.png"&gt;&lt;/p&gt;
 &lt;p&gt;Here you can see that we have imported a &lt;strong&gt;Pillow&lt;/strong&gt; package named &lt;strong&gt;ImageFilter&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;now using this package we have applied a &lt;strong&gt;GaussianBlur&lt;/strong&gt; to our image using the default values and our image is now noticeably blurred.&lt;/p&gt;
 &lt;p&gt;There are many things you can do using this library. &lt;/p&gt;
