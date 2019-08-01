@@ -114,7 +114,7 @@
 &lt;p&gt;If you go look in your &lt;strong&gt;png folder&lt;/strong&gt; you should see 4 images in there now formatted as .png&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;RESIZING IMAGES&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Create a new sub folder that will store the resized images&lt;/p&gt;
-&lt;p&gt;I will name mines: new_size&lt;/p&gt;
+&lt;p&gt;I will name mines: size_300&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;path2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;C:&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Users&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;v_sha&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Documents&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;PIllowBlog&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;size_300&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -160,9 +160,53 @@
 
 &lt;p&gt;Using the same exact block of code, we added in an additional &lt;strong&gt;i.thumbnail()&lt;/strong&gt; line of code where we set in the arguement for our new dimensions of (700, 700)&lt;/p&gt;
 &lt;p&gt;So the &lt;strong&gt;for loop&lt;/strong&gt; will now loop through our images and create new resized images of (700, 700) and then do the same for (300, 300)&lt;/p&gt;
-&lt;p&gt;If you look inside your folders you will see them now populated accordinkly with the resized images.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry><entry><title>Frequentists vs Bayesians</title><link href="https://vishalsharma01.github.io/Blog/blog-4.html" rel="alternate"></link><published>2019-07-29T00:00:00-04:00</published><updated>2019-07-29T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-29:/Blog/blog-4.html</id><summary type="html">&lt;h4&gt;It is the never ending debate in the world of statistics.&lt;/h4&gt;
+&lt;p&gt;If you look inside your folders you will see them now populated accordingly with the resized images.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ALTERING IMAGES&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1) Rotate an Image:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(let's double check and see our intial image object that we stored at the very beginning)&lt;/em&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;image1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="png" src="output_71_0.png"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;image1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rotate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;180&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="png" src="output_72_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;Using the &lt;strong&gt;.rotate()&lt;/strong&gt; attribute we have rotated our image object 180 degrees so that it is now upside down. If you wanted to save the image like this you can store it back into the original object &lt;em&gt;(image1)&lt;/em&gt; or store it into a new object&lt;/p&gt;
+&lt;p&gt;2) Change Image Colour&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;image1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="png" src="output_76_0.png"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;image1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;convert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mode&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;L&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="png" src="output_77_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;As you can see &lt;strong&gt;.convert(mode='L')&lt;/strong&gt; is used to convert a coloured image into black and white.&lt;/p&gt;
+&lt;p&gt;3) Blur an Image&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PIL&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;ImageFilter&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;image1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="png" src="output_82_0.png"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;image1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ImageFilter&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GaussianBlur&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="png" src="output_83_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;Here you can see that we have imported a &lt;strong&gt;Pillow&lt;/strong&gt; package named &lt;strong&gt;ImageFilter&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;now using this package we have applied a &lt;strong&gt;GaussianBlur&lt;/strong&gt; to our image using the default values and our image is now noticeably blurred.&lt;/p&gt;
+&lt;p&gt;There are many things you can do using this library. &lt;/p&gt;
+&lt;p&gt;I wanted to focus on some of the basics to help you get started and hopefully this blog was easy to follow along.&lt;/p&gt;
+&lt;p&gt;Check back soon for a follow up post on more Pillow magic!&lt;/p&gt;</content><category term="python"></category></entry><entry><title>Frequentists vs Bayesians</title><link href="https://vishalsharma01.github.io/Blog/blog-4.html" rel="alternate"></link><published>2019-07-29T00:00:00-04:00</published><updated>2019-07-29T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-29:/Blog/blog-4.html</id><summary type="html">&lt;h4&gt;It is the never ending debate in the world of statistics.&lt;/h4&gt;
 &lt;p&gt;Do you follow Frequentism or are you a believer in Bayesianism?&lt;/p&gt;
 &lt;p&gt;In this post we are going to explore both approaches, establish the main differences and analyze how they are used to solve statistical problems.&lt;/p&gt;
 &lt;p&gt;Let's start off by …&lt;/p&gt;</summary><content type="html">&lt;h4&gt;It is the never ending debate in the world of statistics.&lt;/h4&gt;
