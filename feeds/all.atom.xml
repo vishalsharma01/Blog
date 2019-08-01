@@ -32,7 +32,11 @@
 
 
 &lt;p&gt;&lt;em&gt;(Because I have not saved my Jupyter Notebook file in the same folder as where the pictures I am working with are I need to use the file path to access them. To save time from having to write out the file path each time, I am storing them in an object called &lt;strong&gt;Path&lt;/strong&gt; so it will be easier to access. To make things easier for yourself I would suggest creating and saving your &lt;strong&gt;.py&lt;/strong&gt; file within the same folder as your pictures)&lt;/em&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# 1) image1 = Image.open(&amp;#39;C:\\Users\\v_sha\\Documents\\PIllowBlog\\lambo.jpg&amp;#39;)&lt;/span&gt;
+&lt;p&gt;To begin we need to create an object in which we will store our image. To keep things simple we will work with just 1 image to start off.&lt;/p&gt;
+&lt;p&gt;Here I am creating an object called &lt;strong&gt;image1&lt;/strong&gt; which I will use to store an image &lt;em&gt;(lambo.jpg)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Then using &lt;strong&gt;Image.open()&lt;/strong&gt; we will access our image&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# 1) &lt;/span&gt;
+&lt;span class="n"&gt;image1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Image&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;C:&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Users&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;v_sha&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Documents&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;PIllowBlog&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;lambo.jpg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="c1"&gt;# 2)&lt;/span&gt;
 &lt;span class="n"&gt;image1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Image&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lambo.jpg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -43,6 +47,11 @@
 &lt;p&gt;&lt;em&gt;1) shows how I would access the pictures using the file path&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;2) shows me using the &lt;strong&gt;path&lt;/strong&gt; object in which I stored the filepath for convenience)&lt;/em&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;image1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Using the &lt;strong&gt;.show()&lt;/strong&gt; function on your stored image object will open up the image. If you go ahead and run this function you will notice that the image you chose to work with should open up to view.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry><entry><title>Frequentists vs Bayesians</title><link href="https://vishalsharma01.github.io/Blog/blog-4.html" rel="alternate"></link><published>2019-07-29T00:00:00-04:00</published><updated>2019-07-29T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-29:/Blog/blog-4.html</id><summary type="html">&lt;h4&gt;It is the never ending debate in the world of statistics.&lt;/h4&gt;
 &lt;p&gt;Do you follow Frequentism or are you a believer in Bayesianism?&lt;/p&gt;
 &lt;p&gt;In this post we are going to explore both approaches, establish the main differences and analyze how they are used to solve statistical problems.&lt;/p&gt;

@@ -89,7 +89,11 @@
 
 
 <p><em>(Because I have not saved my Jupyter Notebook file in the same folder as where the pictures I am working with are I need to use the file path to access them. To save time from having to write out the file path each time, I am storing them in an object called <strong>Path</strong> so it will be easier to access. To make things easier for yourself I would suggest creating and saving your <strong>.py</strong> file within the same folder as your pictures)</em></p>
-<div class="highlight"><pre><span></span><span class="c1"># 1) image1 = Image.open(&#39;C:\\Users\\v_sha\\Documents\\PIllowBlog\\lambo.jpg&#39;)</span>
+<p>To begin we need to create an object in which we will store our image. To keep things simple we will work with just 1 image to start off.</p>
+<p>Here I am creating an object called <strong>image1</strong> which I will use to store an image <em>(lambo.jpg)</em></p>
+<p>Then using <strong>Image.open()</strong> we will access our image</p>
+<div class="highlight"><pre><span></span><span class="c1"># 1) </span>
+<span class="n">image1</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">v_sha</span><span class="se">\\</span><span class="s1">Documents</span><span class="se">\\</span><span class="s1">PIllowBlog</span><span class="se">\\</span><span class="s1">lambo.jpg&#39;</span><span class="p">)</span>
 
 <span class="c1"># 2)</span>
 <span class="n">image1</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;lambo.jpg&#39;</span><span class="p">)</span>
@@ -100,6 +104,11 @@
 <p><em>1) shows how I would access the pictures using the file path</em></p>
 <p><em>2) shows me using the <strong>path</strong> object in which I stored the filepath for convenience)</em></p>
 <div class="highlight"><pre><span></span><span class="n">image1</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Using the <strong>.show()</strong> function on your stored image object will open up the image. If you go ahead and run this function you will notice that the image you chose to work with should open up to view.</p>
+<div class="highlight"><pre><span></span>
 </pre></div>
                     </section>
                     <hr/>
