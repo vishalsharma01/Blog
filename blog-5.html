@@ -146,7 +146,7 @@
 </pre></div>
 
 
-<p>Here we have imported os and using this we have a created a <strong>for loop</strong> which will loop through our folder (stated in os.listdir()...remember I stored my file path in an object called path for convenience) and the loop will bring up all files that <strong>endswith('.jpg')</strong></p>
+<p>Here we have <strong>imported os</strong> and using this we have a created a <strong>for loop</strong> which will loop through our folder (stated in os.listdir()...remember I stored my file path in an object called path for convenience) and the loop will bring up all files that <strong>endswith('.jpg')</strong></p>
 <p>You can see the printed output of my 4 original car images which were all saved as <strong>.jpg</strong> files</p>
 <p><strong>Change and Save Multiple Image Files at once</strong></p>
 <p>I am going to take my 4 .jpg image files and create duplicate files but as .png's</p>
@@ -169,10 +169,55 @@
 <p>We then specify fn = FileName, and fext = FileExt and split them from each other</p>
 <p>And then finally using <strong>.save()</strong> we are saving the image objects that we have now converted into <strong>.png</strong> files and storing them into our <strong>png folder</strong></p>
 <p>If you go look in your <strong>png folder</strong> you should see 4 images in there now formatted as .png</p>
-<div class="highlight"><pre><span></span>
+<p><strong>RESIZING IMAGES</strong></p>
+<p>Create a new sub folder that will store the resized images</p>
+<p>I will name mines: new_size</p>
+<div class="highlight"><pre><span></span><span class="n">path2</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">v_sha</span><span class="se">\\</span><span class="s1">Documents</span><span class="se">\\</span><span class="s1">PIllowBlog</span><span class="se">\\</span><span class="s1">size_300&#39;</span><span class="p">)</span>
 </pre></div>
 
 
+<div class="highlight"><pre><span></span><span class="n">size_300</span> <span class="o">=</span> <span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.jpg&quot;</span><span class="p">):</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="n">f</span><span class="p">)</span>
+        <span class="n">fn</span><span class="p">,</span> <span class="n">fext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+        <span class="n">i</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">(</span><span class="n">size_300</span><span class="p">)</span>
+        <span class="n">i</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">path2</span> <span class="o">+</span><span class="s1">&#39;/{}.png&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fn</span><span class="p">))</span>
+</pre></div>
+
+
+<p>First we create an object which stores in the new size dimensions that we want:</p>
+<p>*size_300 = (300, 300)</p>
+<p>Then using the same <strong>for loop</strong> as before we add in one additional line:</p>
+<p><strong><em>i.thumbnails(size_300)</em></strong></p>
+<p>which tells the block of code that we want to resize the images before saving them into our folder.</p>
+<p>If you go check your newly created <strong>size_300</strong> you will now see the new images saved in there.</p>
+<p>We can also insert in multiple arguments for resizing images if we needed to and execute it all at once.</p>
+<p><em>create another folder. I will name mines <strong>size_700</strong> to correspond with the new dimensions</em></p>
+<div class="highlight"><pre><span></span><span class="n">path3</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">v_sha</span><span class="se">\\</span><span class="s1">Documents</span><span class="se">\\</span><span class="s1">PIllowBlog</span><span class="se">\\</span><span class="s1">size_700&#39;</span><span class="p">)</span>
+
+<span class="n">size_300</span> <span class="o">=</span> <span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<span class="n">size_700</span> <span class="o">=</span> <span class="p">(</span><span class="mi">700</span><span class="p">,</span> <span class="mi">700</span><span class="p">)</span>
+
+
+<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.jpg&quot;</span><span class="p">):</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="n">f</span><span class="p">)</span>
+        <span class="n">fn</span><span class="p">,</span> <span class="n">fext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+        <span class="n">i</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">(</span><span class="n">size_700</span><span class="p">)</span>
+        <span class="n">i</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">path3</span> <span class="o">+</span><span class="s1">&#39;/{}.png&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fn</span><span class="p">))</span>
+
+        <span class="n">i</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">(</span><span class="n">size_300</span><span class="p">)</span>
+        <span class="n">i</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">path2</span> <span class="o">+</span><span class="s1">&#39;/{}.png&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fn</span><span class="p">))</span>
+</pre></div>
+
+
+<p>Using the same exact block of code, we added in an additional <strong>i.thumbnail()</strong> line of code where we set in the arguement for our new dimensions of (700, 700)</p>
+<p>So the <strong>for loop</strong> will now loop through our images and create new resized images of (700, 700) and then do the same for (300, 300)</p>
+<p>If you look inside your folders you will see them now populated accordinkly with the resized images.</p>
 <div class="highlight"><pre><span></span>
 </pre></div>
                     </section>
