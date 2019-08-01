@@ -73,10 +73,33 @@
 <p>Now if everything is installed and ready to go</p>
 <p><strong>Let's learn:</strong></p>
 <p><img alt="pillow.png" src="images/pillow.png"></p>
-<p>To get started I am going to create a new folder and download a couple images off the internet to work with. I am going to be using the text editor: <strong>Atom</strong> for this post so I will also go ahead and create a <strong>.py</strong> file in the same folder to run Python script to show what I am doing. If you are planning to follow a long your folder should look something like this:</p>
-<p><img alt="ex1.png" src="images/ex1.png"></p>
-<p><em>(here you can see that I have created a folder named <strong>PillowBlog</strong> and I have downloaded 4 images of cars (saved as .jpg) and have also created a <strong>pillow.py</strong> file using <strong>Atom</strong> to work in)</em></p>
-<div class="highlight"><pre><span></span>
+<p>To get started I am going to create a new folder and download a couple images off the internet to work with. Once your ready you should have a folder that looks like this:</p>
+<p><img alt="example1.png" src="images/example1.png"></p>
+<p><em>(here you can see that I have created a folder named <strong>PillowBlog</strong> and I have downloaded 4 images of cars)</em></p>
+<p>We are ready to get started now! I will be working in Jupyter Notebook but you can use what ever tool you like to follow along as mentioned above.</p>
+<p><strong>First we will import the package</strong></p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+</pre></div>
+
+
+<p><em>(once again, PIL has basically become Pillow and uses the same functions and commands to operate. This is why PIL is the name you use to import the library)</em></p>
+<p><strong>OPEN AN IMAGE</strong></p>
+<div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">v_sha</span><span class="se">\\</span><span class="s1">Documents</span><span class="se">\\</span><span class="s1">PIllowBlog</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p><em>(Because I have not saved my Jupyter Notebook file in the same folder as where the pictures I am working with are I need to use the file path to access them. To save time from having to write out the file path each time, I am storing them in an object called <strong>Path</strong> so it will be easier to access. To make things easier for yourself I would suggest creating and saving your <strong>.py</strong> file within the same folder as your pictures)</em></p>
+<div class="highlight"><pre><span></span><span class="c1"># 1) image1 = Image.open(&#39;C:\\Users\\v_sha\\Documents\\PIllowBlog\\lambo.jpg&#39;)</span>
+
+<span class="c1"># 2)</span>
+<span class="n">image1</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;lambo.jpg&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p><em>(the above shows both methods of me accessing my pictures.</em></p>
+<p><em>1) shows how I would access the pictures using the file path</em></p>
+<p><em>2) shows me using the <strong>path</strong> object in which I stored the filepath for convenience)</em></p>
+<div class="highlight"><pre><span></span><span class="n">image1</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
                     </section>
                     <hr/>

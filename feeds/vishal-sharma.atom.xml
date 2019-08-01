@@ -16,10 +16,33 @@
 &lt;p&gt;Now if everything is installed and ready to go&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Let's learn:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="pillow.png" src="images/pillow.png"&gt;&lt;/p&gt;
-&lt;p&gt;To get started I am going to create a new folder and download a couple images off the internet to work with. I am going to be using the text editor: &lt;strong&gt;Atom&lt;/strong&gt; for this post so I will also go ahead and create a &lt;strong&gt;.py&lt;/strong&gt; file in the same folder to run Python script to show what I am doing. If you are planning to follow a long your folder should look something like this:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ex1.png" src="images/ex1.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;(here you can see that I have created a folder named &lt;strong&gt;PillowBlog&lt;/strong&gt; and I have downloaded 4 images of cars (saved as .jpg) and have also created a &lt;strong&gt;pillow.py&lt;/strong&gt; file using &lt;strong&gt;Atom&lt;/strong&gt; to work in)&lt;/em&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
+&lt;p&gt;To get started I am going to create a new folder and download a couple images off the internet to work with. Once your ready you should have a folder that looks like this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="example1.png" src="images/example1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(here you can see that I have created a folder named &lt;strong&gt;PillowBlog&lt;/strong&gt; and I have downloaded 4 images of cars)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;We are ready to get started now! I will be working in Jupyter Notebook but you can use what ever tool you like to follow along as mentioned above.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;First we will import the package&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PIL&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Image&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;em&gt;(once again, PIL has basically become Pillow and uses the same functions and commands to operate. This is why PIL is the name you use to import the library)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;OPEN AN IMAGE&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;C:&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Users&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;v_sha&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Documents&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;PIllowBlog&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;em&gt;(Because I have not saved my Jupyter Notebook file in the same folder as where the pictures I am working with are I need to use the file path to access them. To save time from having to write out the file path each time, I am storing them in an object called &lt;strong&gt;Path&lt;/strong&gt; so it will be easier to access. To make things easier for yourself I would suggest creating and saving your &lt;strong&gt;.py&lt;/strong&gt; file within the same folder as your pictures)&lt;/em&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# 1) image1 = Image.open(&amp;#39;C:\\Users\\v_sha\\Documents\\PIllowBlog\\lambo.jpg&amp;#39;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# 2)&lt;/span&gt;
+&lt;span class="n"&gt;image1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Image&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lambo.jpg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;em&gt;(the above shows both methods of me accessing my pictures.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;1) shows how I would access the pictures using the file path&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;2) shows me using the &lt;strong&gt;path&lt;/strong&gt; object in which I stored the filepath for convenience)&lt;/em&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;image1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry><entry><title>Frequentists vs Bayesians</title><link href="https://vishalsharma01.github.io/Blog/blog-4.html" rel="alternate"></link><published>2019-07-29T00:00:00-04:00</published><updated>2019-07-29T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-29:/Blog/blog-4.html</id><summary type="html">&lt;h4&gt;It is the never ending debate in the world of statistics.&lt;/h4&gt;
 &lt;p&gt;Do you follow Frequentism or are you a believer in Bayesianism?&lt;/p&gt;
 &lt;p&gt;In this post we are going to explore both approaches, establish the main differences and analyze how they are used to solve statistical problems.&lt;/p&gt;
