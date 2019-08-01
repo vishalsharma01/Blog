@@ -12,10 +12,10 @@
 &lt;p&gt;You can go ahead and &lt;strong&gt;pip install Pillow&lt;/strong&gt; in what ever you may be using to follow along (jupyter notebook, terminal, or text editor)&lt;/p&gt;
 &lt;h4&gt;What is Pillow?&lt;/h4&gt;
 &lt;p&gt;Pillow is a Python Imaging Library used for opening, manipulating and storing images. This package works with a variety of files (.png, .jpg, .jpeg, .gif, etc.) which makes it very handy when working on various different projects.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;p&gt;To help you get started in using this package we are going to cover some of the basic things that can be done using Pillow in this post with a follow up post with more advance topics coming at a later date.&lt;/p&gt;
+&lt;p&gt;Now if everything is installed and ready to go&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Let's learn:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="pillow.png" src="images/pillow.png"&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry><entry><title>Frequentists vs Bayesians</title><link href="https://vishalsharma01.github.io/Blog/blog-4.html" rel="alternate"></link><published>2019-07-29T00:00:00-04:00</published><updated>2019-07-29T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-29:/Blog/blog-4.html</id><summary type="html">&lt;h4&gt;It is the never ending debate in the world of statistics.&lt;/h4&gt;
 &lt;p&gt;Do you follow Frequentism or are you a believer in Bayesianism?&lt;/p&gt;
