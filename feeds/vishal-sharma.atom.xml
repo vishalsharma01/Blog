@@ -62,9 +62,60 @@
 
 
 &lt;p&gt;Using these attributes we are able to see data for the image stored within the &lt;strong&gt;image1&lt;/strong&gt; object &lt;em&gt;(lambo.jpg)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;.format = tells us the type of file the image is&lt;/p&gt;
-&lt;p&gt;.size = tells us the dimensions of the image&lt;/p&gt;
+&lt;p&gt;.format = tells us the type of file the image is (JPEG)&lt;/p&gt;
+&lt;p&gt;.size = tells us the dimensions of the image in pixels (259, 194)&lt;/p&gt;
 &lt;p&gt;.mode = tells us that it is a colour image (RGB)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Change and Save New Image Format&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;image1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;save&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lambo.png&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;.save()&lt;/strong&gt; allows us to take an existing image file and save it under a new file extension while keeping the original. If you remember, my original 'lambo' image was a &lt;strong&gt;.jpg&lt;/strong&gt; and I am now creating a new copy of it as a &lt;strong&gt;.png&lt;/strong&gt; file.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Let's now try working with multiple image files&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;listdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;endswith&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.jpg&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;audi&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jpg&lt;/span&gt;
+&lt;span class="n"&gt;ferrari&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jpg&lt;/span&gt;
+&lt;span class="n"&gt;gtr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jpg&lt;/span&gt;
+&lt;span class="n"&gt;lambo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jpg&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Here we have imported os and using this we have a created a &lt;strong&gt;for loop&lt;/strong&gt; which will loop through our folder (stated in os.listdir()...remember I stored my file path in an object called path for convenience) and the loop will bring up all files that &lt;strong&gt;endswith('.jpg')&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You can see the printed output of my 4 original car images which were all saved as &lt;strong&gt;.jpg&lt;/strong&gt; files&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Change and Save Multiple Image Files at once&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I am going to take my 4 .jpg image files and create duplicate files but as .png's&lt;/p&gt;
+&lt;p&gt;I am going to create a &lt;strong&gt;png&lt;/strong&gt; sub folder in my main image folder that I have been working in to save these new files.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="example2.png" src="images/example2.png"&gt;&lt;/p&gt;
+&lt;p&gt;Now let's create the 4 &lt;strong&gt;.png&lt;/strong&gt; files and save them into the &lt;strong&gt;png folder&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;path1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;C:&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Users&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;v_sha&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Documents&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;PIllowBlog&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;png&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;listdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;endswith&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.jpg&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Image&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;fn&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fext&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;splitext&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;save&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path1&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/{}.png&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fn&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Here we are creating a &lt;strong&gt;for loop&lt;/strong&gt; that goes into the folder and grabs the 4 original .jpg images that we have and creates objects out of them.&lt;/p&gt;
+&lt;p&gt;We then specify fn = FileName, and fext = FileExt and split them from each other&lt;/p&gt;
+&lt;p&gt;And then finally using &lt;strong&gt;.save()&lt;/strong&gt; we are saving the image objects that we have now converted into &lt;strong&gt;.png&lt;/strong&gt; files and storing them into our &lt;strong&gt;png folder&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you go look in your &lt;strong&gt;png folder&lt;/strong&gt; you should see 4 images in there now formatted as .png&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry><entry><title>Frequentists vs Bayesians</title><link href="https://vishalsharma01.github.io/Blog/blog-4.html" rel="alternate"></link><published>2019-07-29T00:00:00-04:00</published><updated>2019-07-29T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-29:/Blog/blog-4.html</id><summary type="html">&lt;h4&gt;It is the never ending debate in the world of statistics.&lt;/h4&gt;
 &lt;p&gt;Do you follow Frequentism or are you a believer in Bayesianism?&lt;/p&gt;
