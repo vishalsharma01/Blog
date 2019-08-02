@@ -5,11 +5,11 @@
 &lt;p&gt;PIL/Pillow are basically the same exact package with Pillow being the module that took over. They operate using the same exact add …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Welcome back&lt;/strong&gt; for another exciting blog post!&lt;/p&gt;
 &lt;p&gt;Today's topic that we will be covered is the Python package: &lt;strong&gt;Pil/Pillow&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Before we get started a quick note:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;PIL/Pillow are basically the same exact package with Pillow being the module that took over. They operate using the same exact add on's and funcitons. &lt;/p&gt;
+&lt;p&gt;PIL/Pillow are basically the same exact package with Pillow being the module that took over. They operate using the same exact add on's and functions. &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;PIL and Pillow cannot co-exist in the same environment&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;(To keep things simple I would suggest you double check which package you may have installed already using &lt;strong&gt;pip freeze&lt;/strong&gt;.)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;If PIL is what you have it will probably be worthwhile to uninstall it and &lt;strong&gt;pip install Pillow&lt;/strong&gt; in it's place to make sure we dont encounter any issues moving forward.&lt;/p&gt;
-&lt;p&gt;You can go ahead and &lt;strong&gt;pip install Pillow&lt;/strong&gt; in what ever you may be using to follow along (jupyter notebook, terminal, or text editor)&lt;/p&gt;
+&lt;p&gt;You can go ahead and &lt;strong&gt;pip install Pillow&lt;/strong&gt; in what ever you may be using to follow along (jupyter notebook, terminal or text editor)&lt;/p&gt;
 &lt;h4&gt;What is Pillow?&lt;/h4&gt;
 &lt;p&gt;Pillow is a Python Imaging Library used for opening, manipulating and storing images. This package works with a variety of files (.png, .jpg, .jpeg, .gif, etc.) which makes it very handy when working on various different projects.&lt;/p&gt;
 &lt;p&gt;To help you get started in using this package we are going to cover some of the basic things that can be done using Pillow in this post with a follow up post with more advance topics coming at a later date.&lt;/p&gt;
