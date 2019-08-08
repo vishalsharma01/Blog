@@ -36,21 +36,27 @@
 &lt;p&gt;The images should all be stored in a folder called downloads and there should be sub-folders for each argument(sport).&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Once again, I chose to classify sports images for my own personal project, you can use what ever you like to follow along.&lt;/em&gt;&lt;/p&gt;
 &lt;h3&gt;Step 3: Load in Data(images)&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Import Libaries&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import os
-import glob&lt;/p&gt;
-&lt;p&gt;from PIL import Image&lt;/p&gt;
-&lt;p&gt;from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelBinarizer
-from sklearn.metrics import confusion_matrix&lt;/p&gt;
-&lt;p&gt;from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout, Activation, Flatten, Input
-from tensorflow.keras.layers import Conv2D, MaxPooling2D
-from tensorflow.keras.utils import to_categorical&lt;/p&gt;
-&lt;p&gt;%matplotlib inline&lt;/p&gt;</content><category term="python"></category></entry><entry><title>Python's (PIL)low Package</title><link href="https://vishalsharma01.github.io/Blog/blog-5.html" rel="alternate"></link><published>2019-07-31T00:00:00-04:00</published><updated>2019-07-31T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-31:/Blog/blog-5.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Welcome back&lt;/strong&gt; for another exciting blog post!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Import Libraries&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;glob&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PIL&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Image&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.model_selection&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;train_test_split&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.preprocessing&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;LabelBinarizer&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.metrics&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;confusion_matrix&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tensorflow.keras.models&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Sequential&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tensorflow.keras.layers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Dense&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Dropout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Activation&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Flatten&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Input&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tensorflow.keras.layers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Conv2D&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;MaxPooling2D&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tensorflow.keras.utils&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;to_categorical&lt;/span&gt;
+
+
+&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;matplotlib&lt;/span&gt; &lt;span class="n"&gt;inline&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry><entry><title>Python's (PIL)low Package</title><link href="https://vishalsharma01.github.io/Blog/blog-5.html" rel="alternate"></link><published>2019-07-31T00:00:00-04:00</published><updated>2019-07-31T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-31:/Blog/blog-5.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Welcome back&lt;/strong&gt; for another exciting blog post!&lt;/p&gt;
 &lt;p&gt;Today's topic that we will be covered is the Python package: &lt;strong&gt;Pil/Pillow&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Before we get started a quick note:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;PIL/Pillow are basically the same exact package with Pillow being the module that took over. They operate using the same exact add …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Welcome back&lt;/strong&gt; for another exciting blog post!&lt;/p&gt;
