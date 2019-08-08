@@ -90,7 +90,7 @@
 <div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">google_images_download</span><span class="o">.</span><span class="n">googleimagesdownload</span><span class="p">()</span>   
 
 <span class="n">arguments</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;keywords&quot;</span><span class="p">:</span><span class="s2">&quot;Baseball&quot;</span><span class="p">,</span><span class="s2">&quot;Basketball&quot;</span><span class="p">,</span><span class="s2">&quot;Hockey&quot;</span><span class="p">,</span><span class="s2">&quot;Football&quot;</span><span class="p">,</span><span class="s2">&quot;Soccer&quot;</span> <span class="c1">#creating list of arguments</span>
-             <span class="s2">&quot;limit&quot;</span><span class="p">:</span><span class="mi">1500</span><span class="p">,</span> <span class="c1">#(No. of images to download per argument)</span>
+             <span class="s2">&quot;limit&quot;</span><span class="p">:</span><span class="mi">1500</span><span class="p">,</span> <span class="c1">#Specify # of images to download per argument</span>
              <span class="s2">&quot;format&quot;</span><span class="p">:</span><span class="s2">&quot;png&quot;</span><span class="p">,</span> <span class="c1">#State file type</span>
              <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;medium&quot;</span> <span class="c1">#size of file</span>
              <span class="s2">&quot;print_urls&quot;</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span> <span class="c1">#print file url</span>
@@ -98,6 +98,28 @@
 <span class="n">paths</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">arguments</span><span class="p">)</span>   <span class="c1">#passing the arguments to the function</span>
 <span class="k">print</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span>   <span class="c1">#printing absolute paths of the downloaded images</span>
 </pre></div>
+
+
+<p><em>("chromedriver" is needed to scroll through Google for images because only a certain amount are shown at once. More information can be found on the Google Images Downloader documentation page)</em></p>
+<p>Running this code allowed me to download approximately 1500 images for each of my arguments (Baseball, Basketball, Hockey, Football and Soccer). I say <strong>approximately</strong> because some images can be corrupted and wont be downloaded.</p>
+<p>The images should all be stored in a folder called downloads and there should be sub-folders for each argument(sport).</p>
+<p><em>Once again, I chose to classify sports images for my own personal project, you can use what ever you like to follow along.</em></p>
+<h3>Step 3: Load in Data(images)</h3>
+<p><strong>Import Libaries</strong></p>
+<p>import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import os
+import glob</p>
+<p>from PIL import Image</p>
+<p>from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelBinarizer
+from sklearn.metrics import confusion_matrix</p>
+<p>from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout, Activation, Flatten, Input
+from tensorflow.keras.layers import Conv2D, MaxPooling2D
+from tensorflow.keras.utils import to_categorical</p>
+<p>%matplotlib inline</p>
                     </section>
                     <hr/>
                     <aside class="post-meta">

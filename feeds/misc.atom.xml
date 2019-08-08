@@ -21,14 +21,36 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;google_images_download&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;googleimagesdownload&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;   
 
 &lt;span class="n"&gt;arguments&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;keywords&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Baseball&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Basketball&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hockey&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Football&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Soccer&amp;quot;&lt;/span&gt; &lt;span class="c1"&gt;#creating list of arguments&lt;/span&gt;
-             &lt;span class="s2"&gt;&amp;quot;limit&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;1500&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;#(No. of images to download per argument)&lt;/span&gt;
+             &lt;span class="s2"&gt;&amp;quot;limit&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;1500&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;#Specify # of images to download per argument&lt;/span&gt;
              &lt;span class="s2"&gt;&amp;quot;format&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;png&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;#State file type&lt;/span&gt;
              &lt;span class="s2"&gt;&amp;quot;size&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;medium&amp;quot;&lt;/span&gt; &lt;span class="c1"&gt;#size of file&lt;/span&gt;
              &lt;span class="s2"&gt;&amp;quot;print_urls&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;#print file url&lt;/span&gt;
              &lt;span class="s2"&gt;&amp;quot;chromedriver&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;C:&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;Users&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;v_sha&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;OneDrive&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;Desktop&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;chromedriver_win32 (1)&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;chromedriver.exe&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;   
 &lt;span class="n"&gt;paths&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;download&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arguments&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;#passing the arguments to the function&lt;/span&gt;
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;paths&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;#printing absolute paths of the downloaded images&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry><entry><title>Python's (PIL)low Package</title><link href="https://vishalsharma01.github.io/Blog/blog-5.html" rel="alternate"></link><published>2019-07-31T00:00:00-04:00</published><updated>2019-07-31T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-31:/Blog/blog-5.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Welcome back&lt;/strong&gt; for another exciting blog post!&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;em&gt;("chromedriver" is needed to scroll through Google for images because only a certain amount are shown at once. More information can be found on the Google Images Downloader documentation page)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Running this code allowed me to download approximately 1500 images for each of my arguments (Baseball, Basketball, Hockey, Football and Soccer). I say &lt;strong&gt;approximately&lt;/strong&gt; because some images can be corrupted and wont be downloaded.&lt;/p&gt;
+&lt;p&gt;The images should all be stored in a folder called downloads and there should be sub-folders for each argument(sport).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Once again, I chose to classify sports images for my own personal project, you can use what ever you like to follow along.&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;Step 3: Load in Data(images)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Import Libaries&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import os
+import glob&lt;/p&gt;
+&lt;p&gt;from PIL import Image&lt;/p&gt;
+&lt;p&gt;from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelBinarizer
+from sklearn.metrics import confusion_matrix&lt;/p&gt;
+&lt;p&gt;from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout, Activation, Flatten, Input
+from tensorflow.keras.layers import Conv2D, MaxPooling2D
+from tensorflow.keras.utils import to_categorical&lt;/p&gt;
+&lt;p&gt;%matplotlib inline&lt;/p&gt;</content><category term="python"></category></entry><entry><title>Python's (PIL)low Package</title><link href="https://vishalsharma01.github.io/Blog/blog-5.html" rel="alternate"></link><published>2019-07-31T00:00:00-04:00</published><updated>2019-07-31T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-31:/Blog/blog-5.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Welcome back&lt;/strong&gt; for another exciting blog post!&lt;/p&gt;
 &lt;p&gt;Today's topic that we will be covered is the Python package: &lt;strong&gt;Pil/Pillow&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Before we get started a quick note:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;PIL/Pillow are basically the same exact package with Pillow being the module that took over. They operate using the same exact add …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Welcome back&lt;/strong&gt; for another exciting blog post!&lt;/p&gt;
