@@ -304,8 +304,17 @@
 
 &lt;p&gt;Using this table we are trying to determine the fairness of a given coin. Because a coin flip can only have two possible outcomes (heads or tails) we can establish the fact that each has a probability of 0.5 (50%). &lt;/p&gt;
 &lt;p&gt;What the table is trying to depict is: the total # of coin tosses, how many heads we get and the difference.&lt;/p&gt;
-&lt;p&gt;In the first row we have 10 tosses of which we got 4 heads which means we have a difference of 1. What this means is that since we are using a "fair" coin where the probability of a head or tail is equally 50% we only managed to get 4 heads giving us an unequal difference of 1 againt the total number of tails we got which would be 6.&lt;/p&gt;
+&lt;p&gt;In the first row we have 10 tosses of which we got 4 heads which means we have a negative difference of 1. What this means is that since we are using a "fair" coin where the probability of a head or tail is equally 50% we only managed to get 4 heads giving us an unequal difference of 1 againt the total number of tails we got which would be 6.&lt;/p&gt;
+&lt;p&gt;Likewise, for 10000 tosses we got 5067 heads which gives us a positive difference of 67 against tails.&lt;/p&gt;
 &lt;h4&gt;Bayesians:&lt;/h4&gt;
+&lt;p&gt;Bayesian statistics is an approach which applies procedures to statistical problems using new data to help solve problems or update prior beliefs.&lt;/p&gt;
+&lt;p&gt;Let's try to explain that using a simple example:&lt;/p&gt;
+&lt;p&gt;We are holding a best out of 7 series of 1 vs 1 basketball games between Michael Jordan and Lebron James (which will sadly never happen in real life). Each game is played on a different day.&lt;/p&gt;
+&lt;p&gt;So far 4 games have been played and Michael Jordan has won 3 while Lebron James has won only one.&lt;/p&gt;
+&lt;p&gt;If you were to make a bet on who would win game 5, based on the current numbers my guess is that you would likely pick Michael Jordan to win.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;BUT&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;What if I told you that for one of Michael Jordan's win and Lebron James only win it happened to have rained that day. And there is a high chance of rain forecasted for the day of game 5. Based on this knowledge who would you pick now?&lt;/p&gt;
+&lt;p&gt;Based on new data (the chance for rain) the probability of Lebron James winning game 5 will have increased which then impacts our &lt;strong&gt;prior&lt;/strong&gt; belief of Michael Jordan winning game 5 because he's already won 3 games before the new data was presented to us&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry><entry><title>jinja2</title><link href="https://vishalsharma01.github.io/Blog/blog-3.html" rel="alternate"></link><published>2019-07-16T00:00:00-04:00</published><updated>2019-07-16T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-16:/Blog/blog-3.html</id><summary type="html">&lt;h2&gt;Welcome back folks!&lt;/h2&gt;
 &lt;p&gt;In today's blog we will be covering the topic of jinja2!&lt;/p&gt;
