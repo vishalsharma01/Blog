@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>    Building an Image Classification Model
+        <title>    Frequentists vs Bayesians
 </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
@@ -63,22 +63,119 @@
             <li>
                 <article class="post-entry">
                     <header class="entry-header">
-                        <time class="post-time" datetime="2019-08-08T00:00:00-04:00" pubdate>
-                            Thu 08 August 2019
+                        <time class="post-time" datetime="2019-07-29T00:00:00-04:00" pubdate>
+                            Mon 29 July 2019
                         </time>
-                        <a href="https://vishalsharma01.github.io/Blog/blog-4.html" rel="bookmark"><h1>Building an Image Classification Model</h1></a>
+                        <a href="https://vishalsharma01.github.io/Blog/blog-4.html" rel="bookmark"><h1>Frequentists vs Bayesians</h1></a>
                     </header>
 
                     <section class="post-content">
-                        <p>Using <strong>Deep Learning</strong> theres a vast amount of amazing things we can acheive. One of them being creating a model to classify images. </p>
-<p>Using <strong>CNN</strong> (convolutional neural networks) we can analyze images and train models to understand and classify images.</p>
-<p>In this post I am going to go over the steps I took to create an Image classifying model which I did for a personal project.</p>
-<p><em>(I will try to break down the steps and keep it simple as possible so anyone following along can keep up.)</em></p>
-<p><img alt="deeplearning.png" src="images/deeplearning.png"></p>
-<h3>Step 1: Choosing your data</h3>
-<p>Theres many datasets that you can download off the internet to follow along with this tutorial. One of the most famous ones being the <a href="https://github.com/zalandoresearch/fashion-mnist">MNIST-Fashion</a></p>
-<p>For my own personal project I decided to create a model that classifed sports images. I wanted to be able to classify images across "Baseball, Basketball, Football, Hockey, and Soccer". To do this I web-scraped images off of Google and created my own data set.</p>
-<p>If you are interested in following this route theres a very handy Python Package that you can use that will allow you to download your images very easily called the <a href="https://github.com/hardikvasa/google-images-download">Google Image Downloader</a></p>
+                        <h4>It is the never ending debate in the world of statistics.</h4>
+<p>Do you follow Frequentism or are you a believer in Bayesianism?</p>
+<p>In this post we are going to explore both approaches, establish the main differences and analyze how they are used to solve statistical problems.</p>
+<p>Let's start off by defining the two:</p>
+<h4>Frequentists:</h4>
+<p>For followers of <strong>frequentism</strong>, the belief is that 'probability' only has meaning in terms of a limiting case of repeated measurements. </p>
+<p>Frequentists attempt to calculate the probability of an event occuring by conducting the same experiment over and over again, under the same exact conditions, to predict what the possible outcome would be. </p>
+<p>Basically, frequentist statistics attempts to test whether an event will occur or not.</p>
+<p>Let's take a look at a quick example:</p>
+<p>I am going to use Pandas to spin up a table that will help us get a better understanding of this.</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">example</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;no. of tosses&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">],</span>
+    <span class="s1">&#39;no. of heads&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">502</span><span class="p">,</span> <span class="mi">2533</span><span class="p">,</span> <span class="mi">5067</span><span class="p">],</span>
+    <span class="s1">&#39;difference&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">67</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="n">example</span>
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>no. of tosses</th>
+      <th>no. of heads</th>
+      <th>difference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10</td>
+      <td>4</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>50</td>
+      <td>25</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>100</td>
+      <td>44</td>
+      <td>-6</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>500</td>
+      <td>255</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1000</td>
+      <td>502</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5000</td>
+      <td>2533</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>10000</td>
+      <td>5067</td>
+      <td>67</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Using this table we are trying to determine the fairness of a given coin. Because a coin flip can only have two possible outcomes (heads or tails) we can establish the fact that each has a probability of 0.5 (50%). </p>
+<p>What the table is trying to depict is: the total # of coin tosses, how many heads we get and the difference.</p>
+<p>In the first row we have 10 tosses of which we got 4 heads which means we have a negative difference of 1. What this means is that since we are using a "fair" coin where the probability of a head or tail is equally 50% we only managed to get 4 heads giving us an unequal difference of 1 againt the total number of tails we got which would be 6.</p>
+<p>Likewise, for 10000 tosses we got 5067 heads which gives us a positive difference of 67 against tails.</p>
+<h4>Bayesians:</h4>
+<p>Bayesian statistics is an approach which applies procedures to statistical problems using new data to help solve problems or update prior beliefs.</p>
+<p>Let's try to explain that using a simple example:</p>
+<p>We are holding a best out of 7 series of 1 vs 1 basketball games between Michael Jordan and Lebron James (which will sadly never happen in real life). Each game is played on a different day.</p>
+<p>So far 4 games have been played and Michael Jordan has won 3 while Lebron James has won only one.</p>
+<p>If you were to make a bet on who would win game 5, based on the current numbers my guess is that you would likely pick Michael Jordan to win.</p>
+<p><strong>BUT</strong> </p>
+<p>What if I told you that for one of Michael Jordan's win and Lebron James only win it happened to have rained that day. And there is a high chance of rain forecasted for the day of game 5. Based on this knowledge who would you pick now?</p>
+<p>Based on new data (the chance for rain) the probability of Lebron James winning game 5 will have increased which then impacts our <strong>prior</strong> belief of Michael Jordan winning game 5 because he's already won 3 games before the new data was presented to us</p>
 <div class="highlight"><pre><span></span>
 </pre></div>
                     </section>
