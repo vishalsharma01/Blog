@@ -91,9 +91,9 @@
 
 <span class="n">arguments</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;keywords&quot;</span><span class="p">:</span><span class="s2">&quot;Baseball&quot;</span><span class="p">,</span><span class="s2">&quot;Basketball&quot;</span><span class="p">,</span><span class="s2">&quot;Hockey&quot;</span><span class="p">,</span><span class="s2">&quot;Football&quot;</span><span class="p">,</span><span class="s2">&quot;Soccer&quot;</span> <span class="c1">#creating list of arguments</span>
              <span class="s2">&quot;limit&quot;</span><span class="p">:</span><span class="mi">1500</span><span class="p">,</span> <span class="c1">#Specify # of images to download per argument</span>
-             <span class="s2">&quot;format&quot;</span><span class="p">:</span><span class="s2">&quot;png&quot;</span><span class="p">,</span> <span class="c1">#State file type</span>
-             <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;medium&quot;</span> <span class="c1">#size of file</span>
-             <span class="s2">&quot;print_urls&quot;</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span> <span class="c1">#print file url</span>
+             <span class="s2">&quot;format&quot;</span><span class="p">:</span><span class="s2">&quot;png&quot;</span><span class="p">,</span> <span class="c1">#Specify file type (optional)</span>
+             <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;medium&quot;</span> <span class="c1">#size of file (optional)</span>
+             <span class="s2">&quot;print_urls&quot;</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span> <span class="c1">#print file url (optional)</span>
              <span class="s2">&quot;chromedriver&quot;</span><span class="p">:</span><span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">Users</span><span class="se">\\</span><span class="s2">v_sha</span><span class="se">\\</span><span class="s2">OneDrive</span><span class="se">\\</span><span class="s2">Desktop</span><span class="se">\\</span><span class="s2">chromedriver_win32 (1)</span><span class="se">\\</span><span class="s2">chromedriver.exe&quot;</span><span class="p">}</span>   
 <span class="n">paths</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">arguments</span><span class="p">)</span>   <span class="c1">#passing the arguments to the function</span>
 <span class="k">print</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span>   <span class="c1">#printing absolute paths of the downloaded images</span>
@@ -125,6 +125,48 @@
 
 
 <span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</pre></div>
+
+
+<p><strong>Retrieve and list out Image folders in downloads</strong></p>
+<div class="highlight"><pre><span></span><span class="n">folder_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;./downloads&quot;</span><span class="p">)]</span>
+
+<span class="n">folder_names</span>
+</pre></div>
+
+
+<p><strong>Create X and y variables for training and test images/Load images</strong></p>
+<div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">folder</span> <span class="ow">in</span> <span class="n">folder_names</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">files</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;downloads/&quot;</span> <span class="o">+</span> <span class="n">folder</span> <span class="o">+</span> <span class="s2">&quot;/*&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+            <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+            <span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">))</span>
+            <span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+            <span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">dtype</span> <span class="o">=</span> <span class="s2">&quot;float32&quot;</span><span class="p">)</span>
+            <span class="n">img</span> <span class="o">/=</span> <span class="mi">255</span>
+            <span class="k">if</span> <span class="n">img</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>
+                <span class="n">X</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+                <span class="n">label</span> <span class="o">=</span> <span class="n">folder</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;downloads/&quot;</span> <span class="o">+</span> <span class="n">folder</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">file</span><span class="p">)</span>
+</pre></div>
+
+
+<p><strong>Convert Data into Array and Inspect Shape</strong></p>
+<div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="n">X</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>
 </pre></div>
                     </section>
                     <hr/>
