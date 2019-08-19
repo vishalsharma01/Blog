@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>My Blog</title><link href="https://vishalsharma01.github.io/Blog/" rel="alternate"></link><link href="https://vishalsharma01.github.io/Blog/feeds/all.atom.xml" rel="self"></link><id>https://vishalsharma01.github.io/Blog/</id><updated>2019-08-09T00:00:00-04:00</updated><entry><title>Building an Image Classification Model</title><link href="https://vishalsharma01.github.io/Blog/blog-6.html" rel="alternate"></link><published>2019-08-09T00:00:00-04:00</published><updated>2019-08-09T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-08-09:/Blog/blog-6.html</id><summary type="html">&lt;p&gt;Using &lt;strong&gt;Deep Learning&lt;/strong&gt; there is a vast amount of amazing things we can acheive. One of them being creating a model to classify images. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>My Blog</title><link href="https://vishalsharma01.github.io/Blog/" rel="alternate"></link><link href="https://vishalsharma01.github.io/Blog/feeds/all.atom.xml" rel="self"></link><id>https://vishalsharma01.github.io/Blog/</id><updated>2019-08-09T00:00:00-04:00</updated><entry><title>Building an Image Classification Model</title><link href="https://vishalsharma01.github.io/Blog/blog-5.html" rel="alternate"></link><published>2019-08-09T00:00:00-04:00</published><updated>2019-08-09T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-08-09:/Blog/blog-5.html</id><summary type="html">&lt;p&gt;Using &lt;strong&gt;Deep Learning&lt;/strong&gt; there is a vast amount of amazing things we can acheive. One of them being creating a model to classify images. &lt;/p&gt;
 &lt;p&gt;Using &lt;strong&gt;CNN&lt;/strong&gt; (convolutional neural networks) we can analyze images and train models to understand and classify those images.&lt;/p&gt;
 &lt;p&gt;In this post I am going to go …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Using &lt;strong&gt;Deep Learning&lt;/strong&gt; there is a vast amount of amazing things we can acheive. One of them being creating a model to classify images. &lt;/p&gt;
 &lt;p&gt;Using &lt;strong&gt;CNN&lt;/strong&gt; (convolutional neural networks) we can analyze images and train models to understand and classify those images.&lt;/p&gt;
@@ -549,7 +549,7 @@
 &lt;p&gt;Here you can see the first 10 images I have. The very first one is suppose to be a "Basketball" image but the model has predicted it to be "Baseball" which is unfortunate but once again the purpose of this blog is to help you understand the steps in creating a Image Classification Model.&lt;/p&gt;
 &lt;p&gt;Well there you go folks. We have successfully created an Image Classification Model. Hopefully this was simple enough for you to follow along. Thanks for reading!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry><entry><title>Python's (PIL)low Package</title><link href="https://vishalsharma01.github.io/Blog/blog-5.html" rel="alternate"></link><published>2019-07-31T00:00:00-04:00</published><updated>2019-07-31T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-31:/Blog/blog-5.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Welcome back&lt;/strong&gt; for another exciting blog post!&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry><entry><title>Python's (PIL)low Package</title><link href="https://vishalsharma01.github.io/Blog/blog-4.html" rel="alternate"></link><published>2019-07-31T00:00:00-04:00</published><updated>2019-07-31T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-31:/Blog/blog-4.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Welcome back&lt;/strong&gt; for another exciting blog post!&lt;/p&gt;
 &lt;p&gt;Today's topic that we will be covered is the Python package: &lt;strong&gt;Pil/Pillow&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Before we get started a quick note:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;PIL/Pillow are basically the same exact package with Pillow being the module that took over. They operate using the same exact add …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Welcome back&lt;/strong&gt; for another exciting blog post!&lt;/p&gt;
@@ -756,117 +756,7 @@
 &lt;p&gt;now using this package we have applied a &lt;strong&gt;GaussianBlur&lt;/strong&gt; to our image using the default values and our image is now noticeably blurred.&lt;/p&gt;
 &lt;p&gt;There are many things you can do using this library. &lt;/p&gt;
 &lt;p&gt;I wanted to focus on some of the basics to help you get started and hopefully this blog was easy to follow along.&lt;/p&gt;
-&lt;p&gt;Check back soon for a follow up post on more Pillow magic!&lt;/p&gt;</content><category term="python"></category></entry><entry><title>Frequentists vs Bayesians</title><link href="https://vishalsharma01.github.io/Blog/blog-4.html" rel="alternate"></link><published>2019-07-29T00:00:00-04:00</published><updated>2019-07-29T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-29:/Blog/blog-4.html</id><summary type="html">&lt;h4&gt;It is the never ending debate in the world of statistics.&lt;/h4&gt;
-&lt;p&gt;Do you follow Frequentism or are you a believer in Bayesianism?&lt;/p&gt;
-&lt;p&gt;In this post we are going to explore both approaches, establish the main differences and analyze how they are used to solve statistical problems.&lt;/p&gt;
-&lt;p&gt;Let's start off by …&lt;/p&gt;</summary><content type="html">&lt;h4&gt;It is the never ending debate in the world of statistics.&lt;/h4&gt;
-&lt;p&gt;Do you follow Frequentism or are you a believer in Bayesianism?&lt;/p&gt;
-&lt;p&gt;In this post we are going to explore both approaches, establish the main differences and analyze how they are used to solve statistical problems.&lt;/p&gt;
-&lt;p&gt;Let's start off by defining the two:&lt;/p&gt;
-&lt;h4&gt;Frequentists:&lt;/h4&gt;
-&lt;p&gt;For followers of &lt;strong&gt;frequentism&lt;/strong&gt;, the belief is that 'probability' only has meaning in terms of a limiting case of repeated measurements. &lt;/p&gt;
-&lt;p&gt;Frequentists attempt to calculate the probability of an event occuring by conducting the same experiment over and over again, under the same exact conditions, to predict what the possible outcome would be. &lt;/p&gt;
-&lt;p&gt;Basically, frequentist statistics attempts to test whether an event will occur or not.&lt;/p&gt;
-&lt;p&gt;Let's take a look at a quick example:&lt;/p&gt;
-&lt;p&gt;I am going to use Pandas to spin up a table that will help us get a better understanding of this.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;example&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DataFrame&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
-    &lt;span class="s1"&gt;&amp;#39;no. of tosses&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;500&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10000&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s1"&gt;&amp;#39;no. of heads&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;44&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;502&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2533&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5067&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s1"&gt;&amp;#39;difference&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;33&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;67&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="p"&gt;})&lt;/span&gt;
-&lt;span class="n"&gt;example&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div&gt;
-&lt;style scoped&gt;
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-&lt;/style&gt;
-&lt;table border="1" class="dataframe"&gt;
-  &lt;thead&gt;
-    &lt;tr style="text-align: right;"&gt;
-      &lt;th&gt;&lt;/th&gt;
-      &lt;th&gt;no. of tosses&lt;/th&gt;
-      &lt;th&gt;no. of heads&lt;/th&gt;
-      &lt;th&gt;difference&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;th&gt;0&lt;/th&gt;
-      &lt;td&gt;10&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;-1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;1&lt;/th&gt;
-      &lt;td&gt;50&lt;/td&gt;
-      &lt;td&gt;25&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;2&lt;/th&gt;
-      &lt;td&gt;100&lt;/td&gt;
-      &lt;td&gt;44&lt;/td&gt;
-      &lt;td&gt;-6&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;3&lt;/th&gt;
-      &lt;td&gt;500&lt;/td&gt;
-      &lt;td&gt;255&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;4&lt;/th&gt;
-      &lt;td&gt;1000&lt;/td&gt;
-      &lt;td&gt;502&lt;/td&gt;
-      &lt;td&gt;2&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;5&lt;/th&gt;
-      &lt;td&gt;5000&lt;/td&gt;
-      &lt;td&gt;2533&lt;/td&gt;
-      &lt;td&gt;33&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;6&lt;/th&gt;
-      &lt;td&gt;10000&lt;/td&gt;
-      &lt;td&gt;5067&lt;/td&gt;
-      &lt;td&gt;67&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Using this table we are trying to determine the fairness of a given coin. Because a coin flip can only have two possible outcomes (heads or tails) we can establish the fact that each has a probability of 0.5 (50%). &lt;/p&gt;
-&lt;p&gt;What the table is trying to depict is: the total # of coin tosses, how many heads we get and the difference.&lt;/p&gt;
-&lt;p&gt;In the first row we have 10 tosses of which we got 4 heads which means we have a negative difference of 1. What this means is that since we are using a "fair" coin where the probability of a head or tail is equally 50% we only managed to get 4 heads giving us an unequal difference of 1 againt the total number of tails we got which would be 6.&lt;/p&gt;
-&lt;p&gt;Likewise, for 10000 tosses we got 5067 heads which gives us a positive difference of 67 against tails.&lt;/p&gt;
-&lt;h4&gt;Bayesians:&lt;/h4&gt;
-&lt;p&gt;Bayesian statistics is an approach which applies procedures to statistical problems using new data to help solve problems or update prior beliefs.&lt;/p&gt;
-&lt;p&gt;Let's try to explain that using a simple example:&lt;/p&gt;
-&lt;p&gt;We are holding a best out of 7 series of 1 vs 1 basketball games between Michael Jordan and Lebron James (which will sadly never happen in real life). Each game is played on a different day.&lt;/p&gt;
-&lt;p&gt;So far 4 games have been played and Michael Jordan has won 3 while Lebron James has won only one.&lt;/p&gt;
-&lt;p&gt;If you were to make a bet on who would win game 5, based on the current numbers my guess is that you would likely pick Michael Jordan to win.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;BUT&lt;/strong&gt; &lt;/p&gt;
-&lt;p&gt;What if I told you that for one of Michael Jordan's win and Lebron James only win it happened to have rained that day. And there is a high chance of rain forecasted for the day of game 5. Based on this knowledge who would you pick now?&lt;/p&gt;
-&lt;p&gt;Based on new data (the chance for rain) the probability of Lebron James winning game 5 will have increased which then impacts our &lt;strong&gt;prior&lt;/strong&gt; belief of Michael Jordan winning game 5 because he's already won 3 games before the new data was presented to us&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry><entry><title>jinja2</title><link href="https://vishalsharma01.github.io/Blog/blog-3.html" rel="alternate"></link><published>2019-07-16T00:00:00-04:00</published><updated>2019-07-16T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-16:/Blog/blog-3.html</id><summary type="html">&lt;h2&gt;Welcome back folks!&lt;/h2&gt;
+&lt;p&gt;Check back soon for a follow up post on more Pillow magic!&lt;/p&gt;</content><category term="python"></category></entry><entry><title>jinja2</title><link href="https://vishalsharma01.github.io/Blog/blog-3.html" rel="alternate"></link><published>2019-07-16T00:00:00-04:00</published><updated>2019-07-16T00:00:00-04:00</updated><author><name>Vishal Sharma</name></author><id>tag:vishalsharma01.github.io,2019-07-16:/Blog/blog-3.html</id><summary type="html">&lt;h2&gt;Welcome back folks!&lt;/h2&gt;
 &lt;p&gt;In today's blog we will be covering the topic of jinja2!&lt;/p&gt;
 &lt;h3&gt;What is jinja2?&lt;/h3&gt;
 &lt;p&gt;jinja2 is a text-based templating langauge created for Python developers to generate a variety of different markup formats with one of the most popular one being HTML.&lt;/p&gt;

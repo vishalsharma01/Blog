@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>    Frequentists vs Bayesians
+        <title>    Python's (PIL)low Package
 </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
@@ -34,7 +34,7 @@
     </hgroup>
     <nav>
         <ul id="nav-links">
-                <li><a href="https://vishalsharma01.github.io/Blog/">Blog</a></li>
+                <li><a href="https://vishalsharma01.github.io/Blog/blog">Blog</a></li>
                 <li><a href="https://vishalsharma01.github.io/Blog/contact">Contact</a></li>
                 <li><a href="https://vishalsharma01.github.io/Blog/projects">Projects</a></li>
         </ul>
@@ -63,121 +63,218 @@
             <li>
                 <article class="post-entry">
                     <header class="entry-header">
-                        <time class="post-time" datetime="2019-07-29T00:00:00-04:00" pubdate>
-                            Mon 29 July 2019
+                        <time class="post-time" datetime="2019-07-31T00:00:00-04:00" pubdate>
+                            Wed 31 July 2019
                         </time>
-                        <a href="https://vishalsharma01.github.io/Blog/blog-4.html" rel="bookmark"><h1>Frequentists vs Bayesians</h1></a>
+                        <a href="https://vishalsharma01.github.io/Blog/blog-4.html" rel="bookmark"><h1>Python's (PIL)low Package</h1></a>
                     </header>
 
                     <section class="post-content">
-                        <h4>It is the never ending debate in the world of statistics.</h4>
-<p>Do you follow Frequentism or are you a believer in Bayesianism?</p>
-<p>In this post we are going to explore both approaches, establish the main differences and analyze how they are used to solve statistical problems.</p>
-<p>Let's start off by defining the two:</p>
-<h4>Frequentists:</h4>
-<p>For followers of <strong>frequentism</strong>, the belief is that 'probability' only has meaning in terms of a limiting case of repeated measurements. </p>
-<p>Frequentists attempt to calculate the probability of an event occuring by conducting the same experiment over and over again, under the same exact conditions, to predict what the possible outcome would be. </p>
-<p>Basically, frequentist statistics attempts to test whether an event will occur or not.</p>
-<p>Let's take a look at a quick example:</p>
-<p>I am going to use Pandas to spin up a table that will help us get a better understanding of this.</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+                        <p><strong>Welcome back</strong> for another exciting blog post!</p>
+<p>Today's topic that we will be covered is the Python package: <strong>Pil/Pillow</strong>.</p>
+<p><strong>Before we get started a quick note:</strong></p>
+<p>PIL/Pillow are basically the same exact package with Pillow being the module that took over. They operate using the same exact add on's and functions. </p>
+<p><strong>PIL and Pillow cannot co-exist in the same environment</strong></p>
+<p><em>(To keep things simple I would suggest you double check which package you may have installed already using <strong>pip freeze</strong>.)</em></p>
+<p>If PIL is what you have it will probably be worthwhile to uninstall it and <strong>pip install Pillow</strong> in it's place to make sure we dont encounter any issues moving forward.</p>
+<p>You can go ahead and <strong>pip install Pillow</strong> in what ever you may be using to follow along (jupyter notebook, terminal or text editor)</p>
+<h4>What is Pillow?</h4>
+<p>Pillow is a Python Imaging Library used for opening, manipulating and storing images. This package works with a variety of files (.png, .jpg, .jpeg, .gif, etc.) which makes it very handy when working on various different projects.</p>
+<p>To help you get started in using this package we are going to cover some of the basic things that can be done using Pillow in this post with a follow up post with more advance topics coming at a later date.</p>
+<p>Now if everything is installed and ready to go</p>
+<p><strong>Let's learn:</strong></p>
+<p><img alt="pillow.png" src="images/pillow.png"></p>
+<p>To get started I am going to create a new folder and download a couple images off the internet to work with. Once your ready you should have a folder that looks like this:</p>
+<p><img alt="example1.png" src="images/example1.png"></p>
+<p><em>(here you can see that I have created a folder named <strong>PillowBlog</strong> and I have downloaded 4 images of cars)</em></p>
+<p>We are ready to get started now! I will be working in Jupyter Notebook but you can use what ever tool you like to follow along as mentioned above.</p>
+<p><strong>First we will import the package</strong></p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
 </pre></div>
 
 
-<div class="highlight"><pre><span></span><span class="n">example</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-    <span class="s1">&#39;no. of tosses&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">],</span>
-    <span class="s1">&#39;no. of heads&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">502</span><span class="p">,</span> <span class="mi">2533</span><span class="p">,</span> <span class="mi">5067</span><span class="p">],</span>
-    <span class="s1">&#39;difference&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">67</span><span class="p">]</span>
-<span class="p">})</span>
-<span class="n">example</span>
+<p><em>(once again, PIL has basically become Pillow and uses the same functions and commands to operate. This is why PIL is the name you use to import the library)</em></p>
+<p><strong>.OPEN() and .SHOW() AN IMAGE</strong></p>
+<div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">v_sha</span><span class="se">\\</span><span class="s1">Documents</span><span class="se">\\</span><span class="s1">PIllowBlog</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<p><em>(Because I have not saved my Jupyter Notebook file in the same folder as where the pictures I am working with are I need to use the file path to access them. To save time from having to write out the file path each time, I am storing them in an object called <strong>Path</strong> so it will be easier to access. To make things easier for yourself I would suggest creating and saving your <strong>.py</strong> file within the same folder as your pictures)</em></p>
+<p>To begin we need to create an object in which we will store our image. To keep things simple we will work with just 1 image to start off.</p>
+<p>Here I am creating an object called <strong>image1</strong> which I will use to store an image <em>(lambo.jpg)</em></p>
+<p>Then using <strong>Image.open()</strong> we will access our image</p>
+<div class="highlight"><pre><span></span><span class="c1"># 1) </span>
+<span class="n">image1</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">v_sha</span><span class="se">\\</span><span class="s1">Documents</span><span class="se">\\</span><span class="s1">PIllowBlog</span><span class="se">\\</span><span class="s1">lambo.jpg&#39;</span><span class="p">)</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>no. of tosses</th>
-      <th>no. of heads</th>
-      <th>difference</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>10</td>
-      <td>4</td>
-      <td>-1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>50</td>
-      <td>25</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>100</td>
-      <td>44</td>
-      <td>-6</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>500</td>
-      <td>255</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1000</td>
-      <td>502</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>5000</td>
-      <td>2533</td>
-      <td>33</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>10000</td>
-      <td>5067</td>
-      <td>67</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<p>Using this table we are trying to determine the fairness of a given coin. Because a coin flip can only have two possible outcomes (heads or tails) we can establish the fact that each has a probability of 0.5 (50%). </p>
-<p>What the table is trying to depict is: the total # of coin tosses, how many heads we get and the difference.</p>
-<p>In the first row we have 10 tosses of which we got 4 heads which means we have a negative difference of 1. What this means is that since we are using a "fair" coin where the probability of a head or tail is equally 50% we only managed to get 4 heads giving us an unequal difference of 1 againt the total number of tails we got which would be 6.</p>
-<p>Likewise, for 10000 tosses we got 5067 heads which gives us a positive difference of 67 against tails.</p>
-<h4>Bayesians:</h4>
-<p>Bayesian statistics is an approach which applies procedures to statistical problems using new data to help solve problems or update prior beliefs.</p>
-<p>Let's try to explain that using a simple example:</p>
-<p>We are holding a best out of 7 series of 1 vs 1 basketball games between Michael Jordan and Lebron James (which will sadly never happen in real life). Each game is played on a different day.</p>
-<p>So far 4 games have been played and Michael Jordan has won 3 while Lebron James has won only one.</p>
-<p>If you were to make a bet on who would win game 5, based on the current numbers my guess is that you would likely pick Michael Jordan to win.</p>
-<p><strong>BUT</strong> </p>
-<p>What if I told you that for one of Michael Jordan's win and Lebron James only win it happened to have rained that day. And there is a high chance of rain forecasted for the day of game 5. Based on this knowledge who would you pick now?</p>
-<p>Based on new data (the chance for rain) the probability of Lebron James winning game 5 will have increased which then impacts our <strong>prior</strong> belief of Michael Jordan winning game 5 because he's already won 3 games before the new data was presented to us</p>
-<div class="highlight"><pre><span></span>
+<span class="c1"># 2)</span>
+<span class="n">image1</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;lambo.jpg&#39;</span><span class="p">)</span>
 </pre></div>
+
+
+<p><em>(the above shows both methods of me accessing my pictures.</em></p>
+<p><em>1) shows how I would access the pictures using the file path</em></p>
+<p><em>2) shows me using the <strong>path</strong> object in which I stored the filepath for convenience)</em></p>
+<div class="highlight"><pre><span></span><span class="n">image1</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Using the <strong>.show()</strong> function on your stored image object will open up the image. If you go ahead and run this function you will notice that the image you chose to work with should open up to view.</p>
+<p><strong>Checking Image Data</strong></p>
+<p>Like everything, images also have stored data within them that can be helfpul to view when attempting to work with them.</p>
+<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">image1</span><span class="o">.</span><span class="n">format</span><span class="p">,</span> <span class="n">image1</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">image1</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">JPEG</span> <span class="p">(</span><span class="mi">259</span><span class="p">,</span> <span class="mi">194</span><span class="p">)</span> <span class="n">RGB</span>
+</pre></div>
+
+
+<p>Using these attributes we are able to see data for the image stored within the <strong>image1</strong> object <em>(lambo.jpg)</em></p>
+<p>.format = tells us the type of file the image is (JPEG)</p>
+<p>.size = tells us the dimensions of the image in pixels (259, 194)</p>
+<p>.mode = tells us that it is a colour image (RGB)</p>
+<p><strong>Change and Save New Image Format</strong></p>
+<div class="highlight"><pre><span></span><span class="n">image1</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;lambo.png&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p><strong>.save()</strong> allows us to take an existing image file and save it under a new file extension while keeping the original. If you remember, my original 'lambo' image was a <strong>.jpg</strong> and I am now creating a new copy of it as a <strong>.png</strong> file.</p>
+<p><strong>Let's now try working with multiple image files</strong></p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.jpg&quot;</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">audi</span><span class="p">.</span><span class="n">jpg</span>
+<span class="n">ferrari</span><span class="p">.</span><span class="n">jpg</span>
+<span class="n">gtr</span><span class="p">.</span><span class="n">jpg</span>
+<span class="n">lambo</span><span class="p">.</span><span class="n">jpg</span>
+</pre></div>
+
+
+<p>Here we have <strong>imported os</strong> and using this we have a created a <strong>for loop</strong> which will loop through our folder (stated in os.listdir()...remember I stored my file path in an object called path for convenience) and the loop will bring up all files that <strong>endswith('.jpg')</strong></p>
+<p>You can see the printed output of my 4 original car images which were all saved as <strong>.jpg</strong> files</p>
+<p><strong>Change and Save Multiple Image Files at once</strong></p>
+<p>I am going to take my 4 .jpg image files and create duplicate files but as .png's</p>
+<p>I am going to create a <strong>png</strong> sub folder in my main image folder that I have been working in to save these new files.</p>
+<p><img alt="example2.png" src="images/example2.png"></p>
+<p>Now let's create the 4 <strong>.png</strong> files and save them into the <strong>png folder</strong></p>
+<div class="highlight"><pre><span></span><span class="n">path1</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">v_sha</span><span class="se">\\</span><span class="s1">Documents</span><span class="se">\\</span><span class="s1">PIllowBlog</span><span class="se">\\</span><span class="s1">png&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.jpg&quot;</span><span class="p">):</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="n">f</span><span class="p">)</span>
+        <span class="n">fn</span><span class="p">,</span> <span class="n">fext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+        <span class="n">i</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">path1</span> <span class="o">+</span><span class="s1">&#39;/{}.png&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fn</span><span class="p">))</span>
+</pre></div>
+
+
+<p>Here we are creating a <strong>for loop</strong> that goes into the folder and grabs the 4 original .jpg images that we have and creates objects out of them.</p>
+<p>We then specify fn = FileName, and fext = FileExt and split them from each other</p>
+<p>And then finally using <strong>.save()</strong> we are saving the image objects that we have now converted into <strong>.png</strong> files and storing them into our <strong>png folder</strong></p>
+<p>If you go look in your <strong>png folder</strong> you should see 4 images in there now formatted as .png</p>
+<p><strong>RESIZING IMAGES</strong></p>
+<p>Create a new sub folder that will store the resized images</p>
+<p>I will name mines: size_300</p>
+<div class="highlight"><pre><span></span><span class="n">path2</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">v_sha</span><span class="se">\\</span><span class="s1">Documents</span><span class="se">\\</span><span class="s1">PIllowBlog</span><span class="se">\\</span><span class="s1">size_300&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">size_300</span> <span class="o">=</span> <span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.jpg&quot;</span><span class="p">):</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="n">f</span><span class="p">)</span>
+        <span class="n">fn</span><span class="p">,</span> <span class="n">fext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+        <span class="n">i</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">(</span><span class="n">size_300</span><span class="p">)</span>
+        <span class="n">i</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">path2</span> <span class="o">+</span><span class="s1">&#39;/{}.png&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fn</span><span class="p">))</span>
+</pre></div>
+
+
+<p>First we create an object which stores in the new size dimensions that we want:</p>
+<p>*size_300 = (300, 300)</p>
+<p>Then using the same <strong>for loop</strong> as before we add in one additional line:</p>
+<p><strong><em>i.thumbnails(size_300)</em></strong></p>
+<p>which tells the block of code that we want to resize the images before saving them into our folder.</p>
+<p>If you go check your newly created <strong>size_300</strong> you will now see the new images saved in there.</p>
+<p>We can also insert in multiple arguments for resizing images if we needed to and execute it all at once.</p>
+<p><em>create another folder. I will name mines <strong>size_700</strong> to correspond with the new dimensions</em></p>
+<div class="highlight"><pre><span></span><span class="n">path3</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">v_sha</span><span class="se">\\</span><span class="s1">Documents</span><span class="se">\\</span><span class="s1">PIllowBlog</span><span class="se">\\</span><span class="s1">size_700&#39;</span><span class="p">)</span>
+
+<span class="n">size_300</span> <span class="o">=</span> <span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<span class="n">size_700</span> <span class="o">=</span> <span class="p">(</span><span class="mi">700</span><span class="p">,</span> <span class="mi">700</span><span class="p">)</span>
+
+
+<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.jpg&quot;</span><span class="p">):</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="n">f</span><span class="p">)</span>
+        <span class="n">fn</span><span class="p">,</span> <span class="n">fext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+        <span class="n">i</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">(</span><span class="n">size_700</span><span class="p">)</span>
+        <span class="n">i</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">path3</span> <span class="o">+</span><span class="s1">&#39;/{}.png&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fn</span><span class="p">))</span>
+
+        <span class="n">i</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">(</span><span class="n">size_300</span><span class="p">)</span>
+        <span class="n">i</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">path2</span> <span class="o">+</span><span class="s1">&#39;/{}.png&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fn</span><span class="p">))</span>
+</pre></div>
+
+
+<p>Using the same exact block of code, we added in an additional <strong>i.thumbnail()</strong> line of code where we set in the arguement for our new dimensions of (700, 700)</p>
+<p>So the <strong>for loop</strong> will now loop through our images and create new resized images of (700, 700) and then do the same for (300, 300)</p>
+<p>If you look inside your folders you will see them now populated accordingly with the resized images.</p>
+<p><strong>ALTERING IMAGES</strong></p>
+<p>1) Rotate an Image:</p>
+<p><em>(let's double check and see our intial image object that we stored at the very beginning)</em></p>
+<div class="highlight"><pre><span></span><span class="n">image1</span>
+</pre></div>
+
+
+<p><img alt="png" src="images/output_71_0.png"></p>
+<div class="highlight"><pre><span></span><span class="n">image1</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">180</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="png" src="images/output_72_0.png"></p>
+<p>Using the <strong>.rotate()</strong> attribute we have rotated our image object 180 degrees so that it is now upside down. If you wanted to save the image like this you can store it back into the original object <em>(image1)</em> or store it into a new object</p>
+<p>2) Change Image Colour</p>
+<div class="highlight"><pre><span></span><span class="n">image1</span>
+</pre></div>
+
+
+<p><img alt="png" src="images/output_76_0.png"></p>
+<div class="highlight"><pre><span></span><span class="n">image1</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;L&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="png" src="images/output_77_0.png"></p>
+<p>As you can see <strong>.convert(mode='L')</strong> is used to convert a coloured image into black and white.</p>
+<p>3) Blur an Image</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">ImageFilter</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">image1</span>
+</pre></div>
+
+
+<p><img alt="png" src="images/output_82_0.png"></p>
+<div class="highlight"><pre><span></span><span class="n">image1</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ImageFilter</span><span class="o">.</span><span class="n">GaussianBlur</span><span class="p">())</span>
+</pre></div>
+
+
+<p><img alt="png" src="images/output_83_0.png"></p>
+<p>Here you can see that we have imported a <strong>Pillow</strong> package named <strong>ImageFilter</strong></p>
+<p>now using this package we have applied a <strong>GaussianBlur</strong> to our image using the default values and our image is now noticeably blurred.</p>
+<p>There are many things you can do using this library. </p>
+<p>I wanted to focus on some of the basics to help you get started and hopefully this blog was easy to follow along.</p>
+<p>Check back soon for a follow up post on more Pillow magic!</p>
                     </section>
                     <hr/>
                     <aside class="post-meta">
